@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Tableau de bord Achats sous le groupe Finance.
+        Données : bons de commande, fournisseurs, catégories, dette fournisseurs.
+    -->
+    <record id="purchase_dashboard_main" model="spreadsheet.dashboard">
+        <field name="name">Achats</field>
+        <field name="dashboard_group_id" ref="spreadsheet_dashboard.spreadsheet_dashboard_group_finance"/>
+        <field name="sequence">20</field>
+        <field name="spreadsheet_binary_data" type="base64"
+               file="hilatech_purchase_dashboard/data/files/purchase_dashboard.json"/>
+        <field name="sample_dashboard_file_path">hilatech_purchase_dashboard/data/files/purchase_dashboard.json</field>
+    </record>
+</odoo>

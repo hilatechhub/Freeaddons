@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en_US\n"
+
+msgid "Numéro"
+msgstr "Number"
+
+msgid "Mois du Relevé"
+msgstr "Report Month"
+
+msgid "Solde Initial"
+msgstr "Initial Balance"
+
+msgid "Solde Final"
+msgstr "Final Balance"
+
+msgid "Statut du Relevé"
+msgstr "Report Status"
+
+msgid "État de la Caisse du Jour"
+msgstr "Daily Cash Status"
+
+msgid "Opérations"
+msgstr "Operations"
+
+msgid "Responsable"
+msgstr "Responsible"
+
+msgid "Entreprise"
+msgstr "Company"
+
+msgid "Observations"
+msgstr "Observations"
+
+msgid "Date"
+msgstr "Date"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Reçu par"
+msgstr "Received By"
+
+msgid "Montant"
+msgstr "Amount"
+
+msgid "Verrouillée"
+msgstr "Locked"
+
+msgid "Relevé"
+msgstr "Report"
+
+msgid "Date de Début"
+msgstr "Start Date"
+
+msgid "Date de Fin"
+msgstr "End Date"
+
+msgid "Ouvrir la caisse"
+msgstr "Open Cash"
+
+msgid "Clôturer la caisse du jour"
+msgstr "Close Daily Cash"
+
+msgid "Clôturer le relevé mensuel"
+msgstr "Close Monthly Report"
+
+msgid "Relevés de Caisse"
+msgstr "Cash Reports"
+
+msgid "Journal de Caisse"
+msgstr "Cash Journal"
+
+msgid "Rapport de Caisse"
+msgstr "Cash Report"
+
+msgid "Listes des Opérations"
+msgstr "Operations List"
+
+msgid "Générer Excel"
+msgstr "Generate Excel"
+
+msgid "Annuler"
+msgstr "Cancel"
+
+msgid "Ouvert"
+msgstr "Open"
+
+msgid "Clôturé"
+msgstr "Closed"
+
+msgid "Caisse Ouverte"
+msgstr "Cash Open"
+
+msgid "Caisse Fermée"
+msgstr "Cash Closed"

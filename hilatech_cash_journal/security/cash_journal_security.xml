@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Groupe: Utilisateur Cash Journal -->
+        <record id="group_cash_journal_user" model="res.groups">
+            <field name="name">Cash Journal - Utilisateur</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!-- Groupe: Gestionnaire Cash Journal -->
+        <record id="group_cash_journal_manager" model="res.groups">
+            <field name="name">Cash Journal - Gestionnaire</field>
+            <field name="implied_ids" eval="[(4, ref('group_cash_journal_user'))]"/>
+        </record>
+
+    </data>
+</odoo>

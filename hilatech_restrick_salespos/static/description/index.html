@@ -1,0 +1,639 @@
+<!--
+    Odoo Apps Store page - compatibility rules followed on purpose:
+    - ASCII only: accents are HTML entities.
+    - Inline CSS limited to the properties kept by Odoo's html_sanitize whitelist
+      (no flex, gap, box-shadow, position or "background" shorthand).
+    - Layout uses Bootstrap classes (container / row / col-*), available on the store.
+-->
+<div class="container" style="max-width:1140px; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#333333;">
+
+    <!-- ===================== LANGUAGE TABS ===================== -->
+    <ul class="nav nav-tabs justify-content-end" role="tablist" style="margin-top:16px;">
+        <li class="nav-item" role="presentation"><a class="nav-link active" href="#hl-en" data-bs-toggle="tab" data-bs-target="#hl-en" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">English</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" href="#hl-fr" data-bs-toggle="tab" data-bs-target="#hl-fr" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">Fran&ccedil;ais</a></li>
+    </ul>
+
+    <div class="tab-content">
+    <div class="tab-pane fade show active" id="hl-en" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Point of Sale &nbsp;&bull;&nbsp; Inventory &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">POS Stock <span style="color:#FF7900;">Restriction</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:720px; margin:0 auto 26px;">
+            Stop selling what you don't have. Block out-of-stock sales in the Odoo 19 Point of Sale,
+            with a clear popup for the cashier.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Retail &amp; Restaurant</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Free</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">4</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">checkpoints up to payment</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">option per Point of Sale</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">2</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">languages: EN, FR</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">No more sales without stock</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            By default, the Odoo Point of Sale lets cashiers sell any product, even when the stock is empty.
+            This module checks the <b style="color:#13283F;">real quantity on hand</b> in the stock location of each Point of Sale
+            and <b style="color:#13283F;">prevents the sale</b> of storable products that are out of stock, or of a quantity greater than the stock.
+            The cashier is informed instantly with a clear popup.
+        </p>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Key features</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Out-of-stock products blocked</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">A product with no stock cannot be added to the order. A popup explains why and asks the cashier to contact the stock manager.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Quantity limited to the stock</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Clicking a product again, scanning it, or typing a quantity on the numpad can never exceed the quantity available.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Real-time stock per POS</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">The stock is read live from the server, in the source location of the POS operation type. Sales of open sessions are taken into account.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Final check before payment</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">The whole order is checked again on Payment and on validation, in case another sale used the stock meanwhile.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">One click to enable</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">A simple option per Point of Sale, in the Inventory section of the POS settings. Enabled by default after installation.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">06</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Smart and safe</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Only storable products are controlled. Decreasing a quantity, removing a line and refunds are always allowed.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BUILT FOR ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Built for</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Retail Stores</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurants</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Bars &amp; Cafes</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Mini-markets</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Any POS selling stocked products</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">How it works</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Install the module</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">It depends on Point of Sale and Inventory. Make sure your products are storable and your stock is up to date.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Check the option</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Point of Sale &gt; Configuration &gt; Settings &gt; Inventory &gt; Block Out-of-Stock Sales (checked by default).</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Open a new session</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">From now on, the cashier can only sell what is really in stock.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Screenshots</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto;"></div>
+    </div>
+
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Product out of stock</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">The product cannot be added to the order when there is no stock left.</div>
+        <img src="img/pos_out_of_stock.png" alt="Product out of stock popup" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Quantity greater than the stock</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Adding one more unit than available is refused, with the available and requested quantities.</div>
+        <img src="img/pos_insufficient_stock.png" alt="Insufficient stock popup" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Numpad quantities are controlled too</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Typing a quantity above the stock keeps the previous quantity and shows the popup.</div>
+        <img src="img/pos_numpad_blocked.png" alt="Numpad quantity blocked" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Last check before payment</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">If the stock changed since the order was started, the payment is blocked and the products concerned are listed.</div>
+        <img src="img/pos_payment_blocked.png" alt="Payment blocked" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:48px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> One option per Point of Sale</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Point of Sale &gt; Configuration &gt; Settings &gt; Inventory &gt; Block Out-of-Stock Sales.</div>
+        <img src="img/settings.png" alt="Block Out-of-Stock Sales setting" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+
+    <!-- ===================== STOCK CALCULATION ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">How the available stock is computed</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:820px; margin:0 auto 26px; background-color:#FFFFFF; border-radius:10px; border-left-width:4px; border-left-style:solid; border-left-color:#FF7900; padding:20px 24px; font-size:15px; line-height:1.8; color:#555555;">
+            <b style="color:#13283F;">Available</b> = quantity on hand in the source location of the POS operation type (and its sub-locations)<br/>
+            &minus; paid POS orders of open sessions whose stock moves are not done yet<br/>
+            &minus; quantities already in the open orders of the current Point of Sale
+        </div>
+        <ul style="max-width:820px; margin:0 auto; font-size:14px; line-height:1.7; color:#555555;">
+            <li>Offline: the last known stock is used; products with unknown stock are not blocked, so the shop keeps selling.</li>
+            <li>Unpaid orders on other terminals are not counted; the check at payment protects you in that case.</li>
+            <li>Combo items and weighed products are checked when they are added and again at payment.</li>
+        </ul>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Technical information</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Odoo version</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Dependencies</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">point_of_sale, stock</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Controlled products</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Storable products only (services and consumables are not blocked)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Languages</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">English, French</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">License</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Our Services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech supports you on your whole Odoo project.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Odoo Customization" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Customization</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Odoo Implementation" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Implementation</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; Maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; Maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Odoo Migration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Migration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Odoo Integration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Integration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Odoo Consulting" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Consulting</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Odoo Training" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Training</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="Dedicated Developer" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Dedicated Developer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Related Modules</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Other Hilatech apps for Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_stock_report_by_warehouse" target="_blank"><img src="img/related_hilatech_stock_report_by_warehouse.png" alt="Realtime Stock Report by Warehouse" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Realtime Stock Report by Warehouse</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Live stock with one column per warehouse, low stock in red, PDF and Excel export.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_stock_report_by_warehouse" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_waiter_cashier_stats" target="_blank"><img src="img/related_hilatech_pos_waiter_cashier_stats.png" alt="Restaurant KPI Dashboards" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Restaurant KPI Dashboards</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Sales, best waiters and cashiers, customer debt, delivery sales and treasury in four Odoo dashboards.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_waiter_cashier_stats" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_kitchen_print_at_payment" target="_blank"><img src="img/related_hilatech_pos_kitchen_print_at_payment.png" alt="Kitchen Print at Payment" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Kitchen Print at Payment</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Kitchen and bar tickets printed only when the payment is validated, two receipts per payment.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_kitchen_print_at_payment" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_print_command_addition" target="_blank"><img src="img/related_hilatech_pos_print_command_addition.png" alt="Kitchen &amp; Receipt Printing" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Kitchen &amp; Receipt Printing</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Kitchen and bar tickets at the right moment, waiter on tickets, two receipts per payment.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_print_command_addition" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">See all Hilatech modules &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="hl-fr" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Point de Vente &nbsp;&bull;&nbsp; Inventaire &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Restriction de <span style="color:#FF7900;">stock</span> au POS</div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:720px; margin:0 auto 26px;">
+            Arr&ecirc;tez de vendre ce que vous n&#39;avez pas. Bloquez les ventes en rupture de stock dans le Point de Vente Odoo 19,
+            avec un message clair pour le caissier.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Commerce &amp; restaurant</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Gratuit</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">4</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">contr&ocirc;les jusqu&#39;au paiement</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">option par point de vente</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">2</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">langues : EN, FR</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">Fini les ventes sans stock</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Par d&eacute;faut, le Point de Vente Odoo laisse les caissiers vendre n&#39;importe quel produit, m&ecirc;me quand le stock est vide.
+            Ce module v&eacute;rifie la <b style="color:#13283F;">quantit&eacute; r&eacute;ellement en stock</b> dans l&#39;emplacement de chaque point de vente
+            et <b style="color:#13283F;">emp&ecirc;che la vente</b> des produits stockables en rupture, ou d&#39;une quantit&eacute; sup&eacute;rieure au stock.
+            Le caissier est pr&eacute;venu imm&eacute;diatement par un message clair.
+        </p>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Fonctionnalit&eacute;s cl&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Produits en rupture bloqu&eacute;s</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Un produit sans stock ne peut pas &ecirc;tre ajout&eacute; &agrave; la commande. Un message explique pourquoi et invite le caissier &agrave; contacter le gestionnaire de stock.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Quantit&eacute; limit&eacute;e au stock</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Recliquer sur un produit, le scanner ou saisir une quantit&eacute; au pav&eacute; num&eacute;rique ne d&eacute;passe jamais la quantit&eacute; disponible.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Stock en temps r&eacute;el par POS</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Le stock est lu en direct sur le serveur, dans l&#39;emplacement source du type d&#39;op&eacute;ration du POS. Les ventes des sessions ouvertes sont prises en compte.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Contr&ocirc;le final avant paiement</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Toute la commande est rev&eacute;rifi&eacute;e au clic sur Paiement et &agrave; la validation, au cas o&ugrave; une autre vente aurait utilis&eacute; le stock entre-temps.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Activation en un clic</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Une simple option par point de vente, dans la section Inventaire des param&egrave;tres du POS. Activ&eacute;e par d&eacute;faut apr&egrave;s l&#39;installation.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">06</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Intelligent et s&ucirc;r</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Seuls les produits stockables sont contr&ocirc;l&eacute;s. Diminuer une quantit&eacute;, supprimer une ligne et rembourser restent toujours possibles.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BUILT FOR ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Con&ccedil;u pour</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Commerces de d&eacute;tail</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurants</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Bars &amp; caf&eacute;s</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Sup&eacute;rettes</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Tout point de vente de produits stock&eacute;s</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Comment &ccedil;a marche</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Installez le module</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Il d&eacute;pend de Point de Vente et Inventaire. V&eacute;rifiez que vos produits sont stockables et que votre stock est &agrave; jour.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cochez l&#39;option</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Point de Vente &gt; Configuration &gt; Param&egrave;tres &gt; Inventaire &gt; Bloquer la vente sans stock (coch&eacute;e par d&eacute;faut).</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Ouvrez une nouvelle session</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">D&eacute;sormais, le caissier ne peut vendre que ce qui est r&eacute;ellement en stock.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Captures d&#39;&eacute;cran</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto;"></div>
+    </div>
+
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Produit en rupture de stock</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Le produit ne peut pas &ecirc;tre ajout&eacute; &agrave; la commande quand il n&#39;y a plus de stock.</div>
+        <img src="img/pos_out_of_stock_fr.png" alt="Message produit en rupture de stock" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Quantit&eacute; sup&eacute;rieure au stock</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Ajouter une unit&eacute; de plus que le disponible est refus&eacute;, avec les quantit&eacute;s disponible et demand&eacute;e.</div>
+        <img src="img/pos_insufficient_stock.png" alt="Insufficient stock popup" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Les quantit&eacute;s du pav&eacute; num&eacute;rique aussi</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Saisir une quantit&eacute; sup&eacute;rieure au stock conserve la quantit&eacute; pr&eacute;c&eacute;dente et affiche le message.</div>
+        <img src="img/pos_numpad_blocked.png" alt="Numpad quantity blocked" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Dernier contr&ocirc;le avant paiement</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Si le stock a chang&eacute; depuis le d&eacute;but de la commande, le paiement est bloqu&eacute; et les produits concern&eacute;s sont list&eacute;s.</div>
+        <img src="img/pos_payment_blocked.png" alt="Payment blocked" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:48px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Une option par point de vente</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Point de Vente &gt; Configuration &gt; Param&egrave;tres &gt; Inventaire &gt; Bloquer la vente sans stock.</div>
+        <img src="img/settings.png" alt="Block Out-of-Stock Sales setting" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+
+    <!-- ===================== STOCK CALCULATION ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Comment le stock disponible est calcul&eacute;</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:820px; margin:0 auto 26px; background-color:#FFFFFF; border-radius:10px; border-left-width:4px; border-left-style:solid; border-left-color:#FF7900; padding:20px 24px; font-size:15px; line-height:1.8; color:#555555;">
+            <b style="color:#13283F;">Disponible</b> = quantit&eacute; en stock dans l&#39;emplacement source du type d&#39;op&eacute;ration du POS (et ses sous-emplacements)<br/>
+            &minus; commandes POS pay&eacute;es des sessions ouvertes dont les mouvements de stock ne sont pas encore faits<br/>
+            &minus; quantit&eacute;s d&eacute;j&agrave; pr&eacute;sentes dans les commandes ouvertes du point de vente
+        </div>
+        <ul style="max-width:820px; margin:0 auto; font-size:14px; line-height:1.7; color:#555555;">
+            <li>Hors ligne : le dernier stock connu est utilis&eacute; ; les produits au stock inconnu ne sont pas bloqu&eacute;s, la boutique continue de vendre.</li>
+            <li>Les commandes non pay&eacute;es des autres caisses ne sont pas compt&eacute;es ; le contr&ocirc;le au paiement vous prot&egrave;ge dans ce cas.</li>
+            <li>Les menus combo et les produits pes&eacute;s sont contr&ocirc;l&eacute;s &agrave; l&#39;ajout puis de nouveau au paiement.</li>
+        </ul>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Informations techniques</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Version d&#39;Odoo</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">D&eacute;pendances</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">point_of_sale, stock</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Produits contr&ocirc;l&eacute;s</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Produits stockables uniquement (services et consommables ne sont pas bloqu&eacute;s)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Langues</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Anglais, fran&ccedil;ais</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">Licence</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Nos services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech vous accompagne sur tout votre projet Odoo.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Personnalisation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Personnalisation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Impl&eacute;mentation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Impl&eacute;mentation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Migration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Migration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Int&eacute;gration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Int&eacute;gration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Conseil Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Conseil Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Formation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Formation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="D&eacute;veloppeur d&eacute;di&eacute;" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">D&eacute;veloppeur d&eacute;di&eacute;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Modules associ&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Les autres applications Hilatech pour Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_stock_report_by_warehouse" target="_blank"><img src="img/related_hilatech_stock_report_by_warehouse.png" alt="Rapport de stock en temps r&eacute;el par entrep&ocirc;t" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Rapport de stock en temps r&eacute;el par entrep&ocirc;t</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Stock en temps r&eacute;el, une colonne par entrep&ocirc;t, stock faible en rouge, export PDF et Excel.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_stock_report_by_warehouse" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_waiter_cashier_stats" target="_blank"><img src="img/related_hilatech_pos_waiter_cashier_stats.png" alt="Tableaux de bord KPI Restaurant" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Tableaux de bord KPI Restaurant</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Ventes, meilleurs serveurs et caissiers, dette client, ventes en livraison et tr&eacute;sorerie en quatre tableaux de bord.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_waiter_cashier_stats" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_kitchen_print_at_payment" target="_blank"><img src="img/related_hilatech_pos_kitchen_print_at_payment.png" alt="Impression cuisine au paiement" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Impression cuisine au paiement</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Bons cuisine et bar imprim&eacute;s seulement &agrave; la validation du paiement, deux re&ccedil;us.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_kitchen_print_at_payment" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_print_command_addition" target="_blank"><img src="img/related_hilatech_pos_print_command_addition.png" alt="Impression cuisine &amp; re&ccedil;us" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Impression cuisine &amp; re&ccedil;us</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Bons cuisine et bar au bon moment, serveur sur les tickets, deux re&ccedil;us par paiement.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_print_command_addition" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">Voir tous les modules Hilatech &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:46px 24px 30px; text-align:center; margin-bottom:24px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:210px; max-width:70%; height:auto; display:block; margin:0 auto 18px;"/>
+        <div style="color:#FFFFFF; font-size:24px; font-weight:700; margin-bottom:8px;">Need help or a custom report?</div>
+        <div style="color:#D5DDE8; font-size:15px; line-height:1.6; max-width:620px; margin:0 auto 24px;">
+            HILATECH &mdash; Odoo integrator. Support, implementation and custom Odoo development, in English and French.
+        </div>
+        <div style="margin-bottom:24px;">
+            <a href="mailto:support@hilatech.co" style="display:inline-block; background-color:#FF7900; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">support@hilatech.co</a>
+            <a href="https://hilatech.co/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#FFFFFF; color:#13283F; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">hilatech.co</a>
+            <a href="https://api.whatsapp.com/send?phone=237694846159" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#25D366; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">WhatsApp</a>
+        </div>
+        <div style="border-top:1px solid #2C4866; padding-top:18px; color:#9FB0C4; font-size:13px;">
+            &copy; 2026 HILATECH &mdash; Digitalisez. Optimisez. Excellez.
+        </div>
+    </div>
+
+</div>

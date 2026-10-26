@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================
+         VUE GRAPHIQUE : Manquant/Excédent par Caissière
+    ============================================================ -->
+    <record id="view_cloture_caisse_graph_cashier" model="ir.ui.view">
+        <field name="name">cloture.caisse.graph.cashier</field>
+        <field name="model">cloture.caisse</field>
+        <field name="arch" type="xml">
+            <graph string="Manquant/Excédent par Caissière" type="bar">
+                <field name="caissier_id" type="row"/>
+                <field name="manquant_finale" type="measure" widget="float"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         VUE PIVOT : Analyse détaillée par Caissière et Session
+    ============================================================ -->
+    <record id="view_cloture_caisse_pivot" model="ir.ui.view">
+        <field name="name">cloture.caisse.pivot</field>
+        <field name="model">cloture.caisse</field>
+        <field name="arch" type="xml">
+            <pivot string="Analyse Manquant/Excédent">
+                <field name="caissier_id" type="row"/>
+                <field name="session_id" type="column"/>
+                <field name="manquant_finale" type="measure" widget="float"/>
+                <field name="total_physique" type="measure" widget="float"/>
+                <field name="total_erp" type="measure" widget="float"/>
+                <field name="total_commission" type="measure" widget="float"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         VUE PIVOT : Analyse par Date et Caissière
+    ============================================================ -->
+    <record id="view_cloture_caisse_pivot_date" model="ir.ui.view">
+        <field name="name">cloture.caisse.pivot.date</field>
+        <field name="model">cloture.caisse</field>
+        <field name="arch" type="xml">
+            <pivot string="Analyse par Date et Caissière">
+                <field name="date" type="row"/>
+                <field name="caissier_id" type="column"/>
+                <field name="manquant_finale" type="measure" widget="float"/>
+                <field name="is_balanced" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+
+</odoo>

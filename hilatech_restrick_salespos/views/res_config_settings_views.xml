@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_hilatech_restrict" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.hilatech.restrict.salespos</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='pos_inventory_section']" position="inside">
+                <setting id="hilatech_restrict_stock"
+                         string="Block Out-of-Stock Sales"
+                         help="Forbid adding storable products with no stock, or a quantity above the real stock of the PoS location. A popup alerts the cashier.">
+                    <field name="pos_hilatech_restrict_stock"/>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

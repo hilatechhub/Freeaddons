@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Séquence pour les numéros de relevés -->
+        <record id="seq_cash_journal_report" model="ir.sequence">
+            <field name="name">Journal de Caisse - Relevé Mensuel</field>
+            <field name="code">cash.journal.report</field>
+            <field name="prefix">JRN/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+    </data>
+</odoo>

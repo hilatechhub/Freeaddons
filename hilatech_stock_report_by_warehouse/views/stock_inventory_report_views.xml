@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vue Pivot : produits en lignes, entrepôts et emplacements en colonnes -->
+    <record id="view_stock_inventory_report_pivot" model="ir.ui.view">
+        <field name="name">stock.inventory.report.pivot</field>
+        <field name="model">stock.inventory.report</field>
+        <field name="arch" type="xml">
+            <pivot string="Rapport de Stock" disable_linking="True" display_quantity="True">
+                <field name="categ_id"          type="row"/>
+                <field name="product_id"        type="row"/>
+                <field name="warehouse_id"      type="col"/>
+                <field name="quantity"           type="measure" string="Qté en Stock"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- Vue Liste : pour filtrer/rechercher et accéder aux exports -->
+    <record id="view_stock_inventory_report_list" model="ir.ui.view">
+        <field name="name">stock.inventory.report.list</field>
+        <field name="model">stock.inventory.report</field>
+        <field name="arch" type="xml">
+            <list string="Rapport de Stock"
+                  decoration-danger="total_available_quantity &lt; 5"
+                  create="false" edit="false" delete="false">
+                <field name="product_id"        string="Produit"/>
+                <field name="categ_id"          string="Catégorie"    optional="show"/>
+                <field name="warehouse_id"      string="Entrepôt"/>
+                <field name="location_id"       string="Emplacement"/>
+                <field name="location_type"     string="Type Empl."   optional="hide"/>
+                <field name="uom_id"            string="U.M."         optional="show"/>
+                <field name="quantity"          string="Qté en Stock" sum="Total Stock"   optional="show"/>
+                <field name="reserved_quantity" string="Qté Réservée" sum="Total Réservé" optional="show"/>
+                <field name="available_quantity" string="Qté Disponible" sum="Total Disponible"/>
+                <field name="total_available_quantity" string="Total Dispo" sum="Total Général" optional="show"/>
+                <field name="date_filter"      string="Date du Stock" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action Fenêtre : pivot par défaut + liste accessible -->
+    <record id="action_stock_inventory_report" model="ir.actions.act_window">
+        <field name="name">Rapport de Stock</field>
+        <field name="res_model">stock.inventory.report</field>
+        <field name="view_mode">pivot,list</field>
+        <field name="context">{
+            'pivot_measures': ['quantity'],
+            'pivot_row_groupby': ['categ_id', 'product_id'],
+            'pivot_column_groupby': ['warehouse_id']
+        }</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Aucun produit en stock trouvé.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu : Inventaire > Reporting > Rapport de Stock -->
+    <menuitem
+        id="menu_stock_inventory_report"
+        name="Rapport de stock"
+        parent="stock.menu_warehouse_report"
+        action="action_stock_inventory_report"
+        sequence="5"
+        groups="stock.group_stock_manager"/>
+
+</odoo>

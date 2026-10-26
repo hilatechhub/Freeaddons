@@ -1,0 +1,97 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: es_ES\n"
+
+msgid "Numéro"
+msgstr "Número"
+
+msgid "Mois du Relevé"
+msgstr "Mes del Informe"
+
+msgid "Solde Initial"
+msgstr "Saldo Inicial"
+
+msgid "Solde Final"
+msgstr "Saldo Final"
+
+msgid "Statut du Relevé"
+msgstr "Estado del Informe"
+
+msgid "État de la Caisse du Jour"
+msgstr "Estado de la Caja del Día"
+
+msgid "Opérations"
+msgstr "Operaciones"
+
+msgid "Responsable"
+msgstr "Responsable"
+
+msgid "Entreprise"
+msgstr "Empresa"
+
+msgid "Observations"
+msgstr "Observaciones"
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Reçu par"
+msgstr "Recibido por"
+
+msgid "Montant"
+msgstr "Cantidad"
+
+msgid "Verrouillée"
+msgstr "Bloqueada"
+
+msgid "Relevé"
+msgstr "Informe"
+
+msgid "Date de Début"
+msgstr "Fecha de Inicio"
+
+msgid "Date de Fin"
+msgstr "Fecha de Fin"
+
+msgid "Ouvrir la caisse"
+msgstr "Abrir la caja"
+
+msgid "Clôturer la caisse du jour"
+msgstr "Cerrar la caja del día"
+
+msgid "Clôturer le relevé mensuel"
+msgstr "Cerrar el informe mensual"
+
+msgid "Relevés de Caisse"
+msgstr "Informes de Caja"
+
+msgid "Journal de Caisse"
+msgstr "Diario de Caja"
+
+msgid "Rapport de Caisse"
+msgstr "Informe de Caja"
+
+msgid "Listes des Opérations"
+msgstr "Listas de Operaciones"
+
+msgid "Générer Excel"
+msgstr "Generar Excel"
+
+msgid "Annuler"
+msgstr "Cancelar"
+
+msgid "Ouvert"
+msgstr "Abierto"
+
+msgid "Clôturé"
+msgstr "Cerrado"
+
+msgid "Caisse Ouverte"
+msgstr "Caja Abierta"
+
+msgid "Caisse Fermée"
+msgstr "Caja Cerrada"

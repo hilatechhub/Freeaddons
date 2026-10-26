@@ -1,0 +1,545 @@
+<!--
+    Odoo Apps Store page - compatibility rules followed on purpose:
+    - ASCII only: accents are HTML entities.
+    - Inline CSS limited to the properties kept by Odoo's html_sanitize whitelist
+      (no flex, gap, box-shadow, position or "background" shorthand).
+    - Layout uses Bootstrap classes (container / row / col-*), available on the store.
+-->
+<div class="container" style="max-width:1140px; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#333333;">
+
+    <!-- ===================== LANGUAGE TABS ===================== -->
+    <ul class="nav nav-tabs justify-content-end" role="tablist" style="margin-top:16px;">
+        <li class="nav-item" role="presentation"><a class="nav-link active" href="#hl-en" data-bs-toggle="tab" data-bs-target="#hl-en" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">English</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" href="#hl-fr" data-bs-toggle="tab" data-bs-target="#hl-fr" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">Fran&ccedil;ais</a></li>
+    </ul>
+
+    <div class="tab-content">
+    <div class="tab-pane fade show active" id="hl-en" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Accounting &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Cash <span style="color:#FF7900;">Journal</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:720px; margin:0 auto 26px;">
+            Keep your cash register under control: monthly cash statements, daily opening and closing,
+            and operations locked as soon as the day is closed.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community &amp; Enterprise</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Free</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">statement per month</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">2</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">user roles</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">3</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">languages: FR, EN, ES</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">No more cash notebooks</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Many businesses still follow their petty cash in a notebook or a spreadsheet that anyone can change.
+            <b style="color:#13283F;">Cash Journal</b> brings it into Odoo: one <b style="color:#13283F;">statement per month</b>,
+            a simple daily routine <b style="color:#13283F;">open &gt; record &gt; close</b>, a balance that is always up to date,
+            and operations that can no longer be modified once the day is closed.
+        </p>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Key features</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Monthly cash statements</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Automatic numbering (JRN/2026/00001), one open statement per month, opening balance carried over from the last closed statement.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Daily open &amp; close</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Open the cash register, record the day's operations, then close the day: the balance is posted in the statement history.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Live balance</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Signed amounts: positive for cash in, negative for cash out. The final balance is recomputed at every entry.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Tamper-proof operations</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Closing the day locks every operation: no edit, no deletion. A closed monthly statement becomes read-only.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Built-in controls</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">An operation must be dated within the statement month, never in the future, and its amount cannot be zero.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">06</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Excel cash report</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Choose a date range and get an Excel file with each statement, its balances and all its operations.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BUILT FOR ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Built for</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurants &amp; Hotels</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Retail Stores</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Services &amp; Consulting</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">SMEs &amp; Franchises</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Any business with a cash box</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">How it works</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Create the monthly statement</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Cash Journal &gt; Cash Reports &gt; New. The number and the opening balance are filled in for you.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Open the register &amp; record</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Each morning, open the cash register and enter cash in (+) and cash out (&minus;) with the person involved.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Close the day, then the month</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Close the day to lock the operations. At month end, close the statement: its balance opens the next one.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Technical information</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Odoo version</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community &amp; Enterprise</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Dependencies</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">base, account, mail</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Python library</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">openpyxl, for the Excel report (shipped with Odoo)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Access rights</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Cash Journal - User &bull; Cash Journal - Manager</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Traceability</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Chatter and activities on every statement</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Languages</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">French, English, Spanish</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">License</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Our Services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech supports you on your whole Odoo project.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Odoo Customization" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Customization</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Odoo Implementation" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Implementation</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; Maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; Maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Odoo Migration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Migration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Odoo Integration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Integration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Odoo Consulting" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Consulting</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Odoo Training" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Training</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="Dedicated Developer" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Dedicated Developer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Related Modules</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Other Hilatech apps for Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank"><img src="img/related_hilatech_pos_cash_closing.png" alt="POS Cash Closing" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">POS Cash Closing</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Daily cash count vs Odoo per payment method, shortages and overages, approval and PDF report.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank"><img src="img/related_hilatech_hotel_management.png" alt="Hotel Management PMS 360&deg;" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Hotel Management PMS 360&deg;</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Availability planning, reservations, check-in / check-out, guest folio, invoicing and housekeeping.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_export_accounting_report" target="_blank"><img src="img/related_hilatech_export_accounting_report.png" alt="Export Accounting Reports to Excel" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Export Accounting Reports to Excel</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">12 Base Accounting Kit reports and your invoices exported to Excel in one click.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_export_accounting_report" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank"><img src="img/related_hilatech_purchase_dashboard.png" alt="Purchase Dashboard" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Purchase Dashboard</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Purchases, vendor debt, orders not received or not invoiced and top suppliers at a glance.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">See all Hilatech modules &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="hl-fr" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Comptabilit&eacute; &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Journal de <span style="color:#FF7900;">Caisse</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:720px; margin:0 auto 26px;">
+            Gardez votre caisse sous contr&ocirc;le : relev&eacute;s mensuels, ouverture et cl&ocirc;ture quotidiennes,
+            et op&eacute;rations verrouill&eacute;es d&egrave;s que la journ&eacute;e est cl&ocirc;tur&eacute;e.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community &amp; Enterprise</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Gratuit</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">relev&eacute; par mois</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">2</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">r&ocirc;les utilisateurs</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">3</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">langues : FR, EN, ES</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">Fini les cahiers de caisse</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Beaucoup d&#39;entreprises suivent encore leur caisse dans un cahier ou un tableur que tout le monde peut modifier.
+            <b style="color:#13283F;">Journal de Caisse</b> l&#39;am&egrave;ne dans Odoo : un <b style="color:#13283F;">relev&eacute; par mois</b>,
+            une routine quotidienne simple <b style="color:#13283F;">ouvrir &gt; saisir &gt; cl&ocirc;turer</b>, un solde toujours &agrave; jour,
+            et des op&eacute;rations qui ne peuvent plus &ecirc;tre modifi&eacute;es une fois la journ&eacute;e cl&ocirc;tur&eacute;e.
+        </p>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Fonctionnalit&eacute;s cl&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Relev&eacute;s de caisse mensuels</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Num&eacute;rotation automatique (JRN/2026/00001), un relev&eacute; ouvert par mois, solde initial repris du dernier relev&eacute; cl&ocirc;tur&eacute;.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Ouverture &amp; cl&ocirc;ture quotidiennes</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Ouvrez la caisse, saisissez les op&eacute;rations du jour, puis cl&ocirc;turez la journ&eacute;e : le solde est inscrit dans l&#39;historique du relev&eacute;.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Solde en temps r&eacute;el</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Montants sign&eacute;s : positif pour une entr&eacute;e, n&eacute;gatif pour une sortie. Le solde final est recalcul&eacute; &agrave; chaque saisie.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Op&eacute;rations infalsifiables</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">La cl&ocirc;ture du jour verrouille chaque op&eacute;ration : ni modification, ni suppression. Un relev&eacute; mensuel cl&ocirc;tur&eacute; passe en lecture seule.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Contr&ocirc;les int&eacute;gr&eacute;s</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Une op&eacute;ration doit &ecirc;tre dat&eacute;e dans le mois du relev&eacute;, jamais dans le futur, et son montant ne peut pas &ecirc;tre nul.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">06</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Rapport de caisse Excel</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Choisissez une p&eacute;riode et obtenez un fichier Excel avec chaque relev&eacute;, ses soldes et toutes ses op&eacute;rations.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BUILT FOR ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Con&ccedil;u pour</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurants &amp; h&ocirc;tels</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Commerces de d&eacute;tail</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Services &amp; conseil</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">PME &amp; franchises</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Toute entreprise avec une caisse</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Comment &ccedil;a marche</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cr&eacute;ez le relev&eacute; du mois</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Journal de Caisse &gt; Relev&eacute;s de Caisse &gt; Nouveau. Le num&eacute;ro et le solde initial sont remplis pour vous.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Ouvrez la caisse &amp; saisissez</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Chaque matin, ouvrez la caisse et saisissez les entr&eacute;es (+) et les sorties (&minus;) avec la personne concern&eacute;e.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cl&ocirc;turez le jour, puis le mois</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Cl&ocirc;turez la journ&eacute;e pour verrouiller les op&eacute;rations. En fin de mois, cl&ocirc;turez le relev&eacute; : son solde ouvre le suivant.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Informations techniques</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Version d&#39;Odoo</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community &amp; Enterprise</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">D&eacute;pendances</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">base, account, mail</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Biblioth&egrave;que Python</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">openpyxl, pour le rapport Excel (fourni avec Odoo)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Droits d&#39;acc&egrave;s</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Cash Journal - Utilisateur &bull; Cash Journal - Gestionnaire</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Tra&ccedil;abilit&eacute;</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Chatter et activit&eacute;s sur chaque relev&eacute;</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Langues</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Fran&ccedil;ais, anglais, espagnol</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">Licence</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Nos services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech vous accompagne sur tout votre projet Odoo.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Personnalisation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Personnalisation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Impl&eacute;mentation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Impl&eacute;mentation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Migration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Migration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Int&eacute;gration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Int&eacute;gration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Conseil Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Conseil Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Formation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Formation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="D&eacute;veloppeur d&eacute;di&eacute;" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">D&eacute;veloppeur d&eacute;di&eacute;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Modules associ&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Les autres applications Hilatech pour Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank"><img src="img/related_hilatech_pos_cash_closing.png" alt="Cl&ocirc;ture de caisse POS" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cl&ocirc;ture de caisse POS</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Comptage quotidien vs Odoo par mode de paiement, manquants et exc&eacute;dents, approbation et rapport PDF.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank"><img src="img/related_hilatech_hotel_management.png" alt="Gestion h&ocirc;teli&egrave;re PMS 360&deg;" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Gestion h&ocirc;teli&egrave;re PMS 360&deg;</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Planning des chambres, r&eacute;servations, check-in / check-out, folio client, facturation et m&eacute;nage.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_export_accounting_report" target="_blank"><img src="img/related_hilatech_export_accounting_report.png" alt="Export des rapports comptables vers Excel" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Export des rapports comptables vers Excel</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">12 rapports Base Accounting Kit et vos factures export&eacute;s vers Excel en un clic.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_export_accounting_report" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank"><img src="img/related_hilatech_purchase_dashboard.png" alt="Tableau de bord Achats" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Tableau de bord Achats</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Achats, dette fournisseurs, commandes non re&ccedil;ues ou non factur&eacute;es et meilleurs fournisseurs.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">Voir tous les modules Hilatech &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:46px 24px 30px; text-align:center; margin-bottom:24px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:210px; max-width:70%; height:auto; display:block; margin:0 auto 18px;"/>
+        <div style="color:#FFFFFF; font-size:24px; font-weight:700; margin-bottom:8px;">Need help or a custom report?</div>
+        <div style="color:#D5DDE8; font-size:15px; line-height:1.6; max-width:620px; margin:0 auto 24px;">
+            HILATECH &mdash; Odoo integrator. Support, implementation and custom Odoo development, in English and French.
+        </div>
+        <div style="margin-bottom:24px;">
+            <a href="mailto:support@hilatech.co" style="display:inline-block; background-color:#FF7900; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">support@hilatech.co</a>
+            <a href="https://hilatech.co/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#FFFFFF; color:#13283F; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">hilatech.co</a>
+            <a href="https://api.whatsapp.com/send?phone=237694846159" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#25D366; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">WhatsApp</a>
+        </div>
+        <div style="border-top:1px solid #2C4866; padding-top:18px; color:#9FB0C4; font-size:13px;">
+            &copy; 2026 HILATECH &mdash; Digitalisez. Optimisez. Excellez.
+        </div>
+    </div>
+
+</div>

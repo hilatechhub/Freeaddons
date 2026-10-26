@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_cloture_caisse" model="ir.actions.report">
+        <field name="name">Rapport de Clôture de Caisse</field>
+        <field name="model">cloture.caisse</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hilatech_pos_cash_closing.report_cloture_caisse_template</field>
+        <field name="report_file">hilatech_pos_cash_closing.report_cloture_caisse_template</field>
+        <field name="binding_model_id" ref="model_cloture_caisse"/>
+        <field name="binding_type">report</field>
+        <field name="paperformat_id" ref="base.paperformat_euro"/>
+    </record>
+</odoo>

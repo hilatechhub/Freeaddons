@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================================================
+         VUE RECHERCHE - RELEVÉ
+         ======================================================================== -->
+
+    <record id="view_cash_journal_report_search" model="ir.ui.view">
+        <field name="name">cash.journal.report.search</field>
+        <field name="model">cash.journal.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Numéro"/>
+                <field name="month_date" string="Mois"/>
+                <field name="user_id" string="Responsable"/>
+                <filter string="Ouverts" name="filter_open" domain="[('state', '=', 'open')]"/>
+                <filter string="Clôturés" name="filter_closed" domain="[('state', '=', 'closed')]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         VUE LISTE - RELEVÉ
+         ======================================================================== -->
+
+    <record id="view_cash_journal_report_list" model="ir.ui.view">
+        <field name="name">cash.journal.report.list</field>
+        <field name="model">cash.journal.report</field>
+        <field name="arch" type="xml">
+            <list string="Relevés de Caisse"
+                  decoration-success="state == 'closed'"
+                  decoration-info="state == 'open' and caisse_state == 'opened'"
+                  decoration-warning="state == 'open' and caisse_state == 'closed'">
+                <field name="name"/>
+                <field name="month_date"/>
+                <field name="initial_balance" sum="Total Soldes Initiaux"/>
+                <field name="final_balance" sum="Total Soldes Finaux"/>
+                <field name="state" widget="badge"
+                       decoration-success="state == 'closed'"
+                       decoration-info="state == 'open'"/>
+                <field name="caisse_state" widget="badge"
+                       decoration-success="caisse_state == 'opened'"
+                       decoration-danger="caisse_state == 'closed'"/>
+                <field name="user_id"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         VUE FORMULAIRE - RELEVÉ
+         ======================================================================== -->
+
+    <record id="view_cash_journal_report_form" model="ir.ui.view">
+        <field name="name">cash.journal.report.form</field>
+        <field name="model">cash.journal.report</field>
+        <field name="arch" type="xml">
+            <form string="Journal de Caisse - Relevé Mensuel">
+
+                <!-- ================================================================
+                     HEADER - BOUTONS ET STATUS
+                     ================================================================ -->
+                <header>
+                    <!-- Bouton: Ouvrir la caisse -->
+                    <button name="action_open_caisse" string="Ouvrir la caisse"
+                            type="object" class="btn-success"
+                            invisible="state != 'open' or caisse_state == 'opened'"/>
+
+                    <!-- Bouton: Clôturer la caisse du jour -->
+                    <button name="action_close_day" string="Clôturer la caisse du jour"
+                            type="object" class="btn-warning"
+                            invisible="state != 'open' or caisse_state != 'opened'"
+                            confirm="Êtes-vous sûr de vouloir clôturer la caisse du jour ? Cette action verrouillera toutes les opérations du jour."/>
+
+                    <!-- Bouton: Clôturer le relevé mensuel -->
+                    <button name="action_close_monthly" string="Clôturer le relevé mensuel"
+                            type="object" class="btn-danger"
+                            invisible="state != 'open'"
+                            confirm="Êtes-vous sûr de vouloir clôturer définitivement ce relevé mensuel ? Cette action est irréversible."/>
+
+                    <!-- Status bar -->
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="open,closed"/>
+                </header>
+
+                <!-- ================================================================
+                     SHEET
+                     ================================================================ -->
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <!-- Informations principales -->
+                    <group>
+                        <group string="Informations Générales">
+                            <field name="month_date" readonly="state != 'open'"/>
+                            <field name="user_id" readonly="1"/>
+                            <field name="company_id" readonly="1"/>
+                        </group>
+
+                        <group string="Soldes">
+                            <field name="initial_balance"
+                                   readonly="state != 'open'"
+                                   widget="float"/>
+                            <field name="final_balance" readonly="1"
+                                   widget="float"/>
+                        </group>
+                    </group>
+
+                    <!-- État de la caisse du jour -->
+                    <group>
+                        <group string="État de la Caisse">
+                            <field name="caisse_state" widget="badge"
+                                   readonly="state != 'open'"/>
+                        </group>
+                    </group>
+
+                    <!-- ============================================================
+                         OPÉRATIONS - PAGES
+                         ============================================================ -->
+                    <notebook>
+                        <!-- Page: Opérations -->
+                        <page string="Opérations du Mois" name="operations">
+                            <field name="operation_ids" readonly="state == 'closed' or caisse_state == 'closed'">
+                                <list editable="bottom"
+                                      decoration-success="amount &gt; 0"
+                                      decoration-danger="amount &lt; 0"
+                                      decoration-muted="is_locked">
+                                    <field name="date" readonly="is_locked"/>
+                                    <field name="description" readonly="is_locked"/>
+                                    <field name="received_by" readonly="is_locked"/>
+                                    <field name="amount" readonly="is_locked" sum="Total des Montants"/>
+                                    <field name="is_locked" invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+
+                        <!-- Page: Notes -->
+                        <page string="Observations" name="notes">
+                            <field name="notes" readonly="state != 'open'"/>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <!-- Chatter -->
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         ACTION - RELEVÉ
+         ======================================================================== -->
+
+    <record id="action_cash_journal_report" model="ir.actions.act_window">
+        <field name="name">Journal de Caisse</field>
+        <field name="res_model">cash.journal.report</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_cash_journal_report_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Créer un nouveau relevé de caisse
+            </p>
+            <p>
+                Les relevés de caisse permettent de suivre les entrées et sorties de caisse
+                sur une période mensuelle.
+            </p>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         MENUS
+         ======================================================================== -->
+
+    <menuitem id="menu_cash_journal_root"
+              name="Journal de Caisse"
+              sequence="100"/>
+
+    <menuitem id="menu_cash_journal_report"
+              parent="menu_cash_journal_root"
+              name="Relevés de Caisse"
+              action="action_cash_journal_report"
+              sequence="10"/>
+
+    <!-- ========================================================================
+         RAPPORT DE CAISSE - VUE FORMULAIRE
+         ======================================================================== -->
+
+    <record id="view_cash_journal_pdf_report_form" model="ir.ui.view">
+        <field name="name">cash.journal.pdf.report.form</field>
+        <field name="model">cash.journal.pdf.report</field>
+        <field name="arch" type="xml">
+            <form string="Rapport de Caisse">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>Rapport de Caisse</h1>
+                    </div>
+
+                    <group>
+                        <group string="Paramètres">
+                            <field name="date_start"/>
+                            <field name="date_end"/>
+                            <field name="company_id"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="action_generate_excel"
+                                string="Générer Excel"
+                                type="object"
+                                class="btn-success"/>
+                        <button string="Annuler"
+                                class="btn-secondary"
+                                special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         ACTION - RAPPORT DE CAISSE
+         ======================================================================== -->
+
+    <record id="action_cash_journal_pdf_report" model="ir.actions.act_window">
+        <field name="name">Rapport de Caisse</field>
+        <field name="res_model">cash.journal.pdf.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Générer un rapport de caisse en PDF ou Excel
+            </p>
+            <p>
+                Sélectionnez une plage de dates pour générer le rapport.
+            </p>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         MENU - RAPPORT DE CAISSE
+         ======================================================================== -->
+
+    <menuitem id="menu_cash_journal_report_pdf"
+              parent="menu_cash_journal_root"
+              name="Rapport de Caisse"
+              action="action_cash_journal_pdf_report"
+              sequence="20"/>
+
+    <!-- ========================================================================
+         VUE RECHERCHE - OPÉRATIONS
+         ======================================================================== -->
+
+    <record id="view_cash_journal_operation_search" model="ir.ui.view">
+        <field name="name">cash.journal.operation.search</field>
+        <field name="model">cash.journal.operation</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="description" string="Description"/>
+                <field name="report_id" string="Relevé"/>
+                <field name="date" string="Date"/>
+                <field name="received_by" string="Reçu par"/>
+                <filter string="Entrées" name="filter_entries" domain="[('amount', '&gt;', 0)]"/>
+                <filter string="Sorties" name="filter_exits" domain="[('amount', '&lt;', 0)]"/>
+                <filter string="Verrouillées" name="filter_locked" domain="[('is_locked', '=', True)]"/>
+                <separator/>
+                <filter string="Ce mois" name="filter_current_month" domain="[('date', '&gt;=', context_today().replace(day=1)), ('date', '&lt;', (context_today().replace(day=1) + relativedelta(months=1)))]"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         VUE LISTE - OPÉRATIONS
+         ======================================================================== -->
+
+    <record id="view_cash_journal_operation_list" model="ir.ui.view">
+        <field name="name">cash.journal.operation.list</field>
+        <field name="model">cash.journal.operation</field>
+        <field name="arch" type="xml">
+            <list string="Opérations de Caisse"
+                  decoration-success="amount &gt; 0"
+                  decoration-danger="amount &lt; 0">
+                <field name="date"/>
+                <field name="report_id"/>
+                <field name="description"/>
+                <field name="received_by"/>
+                <field name="amount" sum="Total"/>
+                <field name="is_locked" widget="boolean" readonly="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         VUE GRAPHIQUE - OPÉRATIONS (Somme par relevé)
+         ======================================================================== -->
+
+    <record id="view_cash_journal_operation_graph" model="ir.ui.view">
+        <field name="name">cash.journal.operation.graph</field>
+        <field name="model">cash.journal.operation</field>
+        <field name="arch" type="xml">
+            <graph type="bar" string="Opérations par Relevé">
+                <field name="report_id" type="row"/>
+                <field name="amount" type="measure" operator="sum"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         ACTION - OPÉRATIONS
+         ======================================================================== -->
+
+    <record id="action_cash_journal_operation" model="ir.actions.act_window">
+        <field name="name">Opérations de Caisse</field>
+        <field name="res_model">cash.journal.operation</field>
+        <field name="view_mode">list,graph</field>
+        <field name="search_view_id" ref="view_cash_journal_operation_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Consultez toutes les opérations de caisse
+            </p>
+            <p>
+                Visualisez les entrées et sorties de caisse, ainsi que la somme totale
+                par relevé mensuel.
+            </p>
+        </field>
+    </record>
+
+    <!-- ========================================================================
+         MENU - OPÉRATIONS
+         ======================================================================== -->
+
+    <menuitem id="menu_cash_journal_operation"
+              parent="menu_cash_journal_root"
+              name="Listes des Opérations"
+              action="action_cash_journal_operation"
+              sequence="30"/>
+
+</odoo>

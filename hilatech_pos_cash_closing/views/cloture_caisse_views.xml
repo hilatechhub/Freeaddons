@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================
+         VUE LISTE (historique)
+    ============================================================ -->
+    <record id="view_cloture_caisse_list" model="ir.ui.view">
+        <field name="name">cloture.caisse.list</field>
+        <field name="model">cloture.caisse</field>
+        <field name="arch" type="xml">
+            <list string="Clôtures de Caisse"
+                  decoration-muted="state == 'draft'"
+                  decoration-success="state == 'approved' or manquant_finale > 0"
+                  decoration-info="state == 'confirmed'"
+                  decoration-danger="manquant_finale &lt; 0">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="pos_config_id"/>
+                <field name="session_id"/>
+                <field name="manager_id"/>
+                <field name="caissier_id"/>
+                <field name="total_physique" sum="Total Physique"/>
+                <field name="total_erp" sum="Total ERP"/>
+                <field name="total_commission" sum="Total Commission"/>
+                <field name="manquant_finale" sum="Manquant Final"/>
+                <field name="decision" column_invisible="True"/>
+                <field name="decision_label" optional="show"
+                       decoration-danger="decision == 'a_rembourser'"
+                       decoration-muted="not decision"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         VUE FORMULAIRE
+    ============================================================ -->
+    <record id="view_cloture_caisse_form" model="ir.ui.view">
+        <field name="name">cloture.caisse.form</field>
+        <field name="model">cloture.caisse</field>
+        <field name="arch" type="xml">
+            <form string="Clôture de Caisse">
+                <header>
+                    <button name="action_load_from_session"
+                            string="Charger depuis la session POS"
+                            type="object"
+                            class="btn-primary"
+                            invisible="state != 'draft'"
+                            confirm="Les lignes vont être rechargées depuis la session POS (un total des remboursements saisi manuellement est conservé). Continuer ?"/>
+                    <button name="action_confirm"
+                            string="Confirmer"
+                            type="object"
+                            class="btn-primary"
+                            invisible="state != 'draft'"/>
+                    <button name="action_approve"
+                            string="Approuver"
+                            type="object"
+                            class="btn-success"
+                            invisible="state != 'confirmed'"
+                            groups="point_of_sale.group_pos_manager"/>
+                    <button name="action_reset_to_draft"
+                            string="Remettre en brouillon"
+                            type="object"
+                            invisible="state != 'confirmed'"/>
+                    <button name="action_print_report"
+                            string="Imprimer"
+                            type="object"
+                            class="btn-secondary"
+                            invisible="state == 'draft'"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,confirmed,approved"/>
+                </header>
+
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <group string="Informations">
+                            <field name="pos_config_id" readonly="state != 'draft'"/>
+                            <field name="session_id" readonly="state != 'draft'"/>
+                            <field name="date" readonly="state != 'draft'"/>
+                            <field name="manager_id" readonly="state != 'draft'"/>
+                            <field name="caissier_id" readonly="state != 'draft'"/>
+                        </group>
+                        <group string="Récapitulatif">
+                            <field name="total_physique"/>
+                            <field name="total_erp"/>
+                            <field name="total_balance"/>
+                            <field name="total_commission"/>
+                            <label for="manquant_finale" string="Manquant Final"/>
+                            <div>
+                                <span class="badge text-bg-success px-3 py-2 fs-6 me-2"
+                                      invisible="not is_balanced">Bravo !</span>
+                                <span class="badge text-bg-info px-3 py-2 fs-6 me-2"
+                                      invisible="manquant_finale &lt;= 0">Excédent</span>
+                                <field name="manquant_finale" nolabel="1"
+                                       class="text-danger fw-bold"
+                                       invisible="manquant_finale &gt;= 0 or is_balanced"/>
+                                <field name="manquant_finale" nolabel="1"
+                                       class="text-success fw-bold"
+                                       invisible="manquant_finale &lt; 0 or is_balanced"/>
+                            </div>
+                            <field name="decision"
+                                   invisible="manquant_finale &gt;= 0 or is_balanced"
+                                   required="manquant_finale &lt; 0 and not is_balanced"
+                                   widget="radio">
+                                <option value="a_rembourser">À Rembourser</option>
+                                <option value="non_remboursable">Non Remboursable</option>
+                            </field>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Détail par Mode de Paiement" name="lines">
+                            <field name="line_ids" readonly="state != 'draft'">
+                                <list editable="bottom"
+                                      decoration-danger="ecart &lt; 0"
+                                      decoration-success="ecart &gt; 0 and not is_remboursement">
+                                    <field name="label" readonly="1"/>
+                                    <field name="is_remboursement" column_invisible="True"/>
+                                    <field name="payment_method_id" column_invisible="True"/>
+                                    <field name="controle_physique"
+                                           readonly="is_remboursement"/>
+                                    <field name="etat_erp" readonly="not is_remboursement"/>
+                                    <field name="saisie_manuelle" optional="hide" readonly="1"/>
+                                    <field name="balance" readonly="1"/>
+                                    <field name="has_commission" optional="hide"/>
+                                    <field name="taux_commission"
+                                           readonly="not has_commission or is_remboursement"
+                                           optional="show"/>
+                                    <field name="commission" readonly="1"/>
+                                    <field name="ecart" readonly="1"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Observations" name="note">
+                            <field name="note" placeholder="Remarques du manager..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         VUE RECHERCHE
+    ============================================================ -->
+    <record id="view_cloture_caisse_search" model="ir.ui.view">
+        <field name="name">cloture.caisse.search</field>
+        <field name="model">cloture.caisse</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="pos_config_id"/>
+                <field name="manager_id"/>
+                <field name="caissier_id"/>
+                <field name="date"/>
+                <filter string="Aujourd'hui" name="today"
+                        domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <filter string="Brouillon" name="draft" domain="[('state', '=', 'draft')]"/>
+                <filter string="Confirmé" name="confirmed" domain="[('state', '=', 'confirmed')]"/>
+                <filter string="Approuvé" name="approved" domain="[('state', '=', 'approved')]"/>
+                <separator/>
+                <filter string="Avec Manquant" name="has_manquant" domain="[('manquant_finale', '&lt;', 0)]"/>
+                <filter string="Avec Excédent" name="has_excedent" domain="[('manquant_finale', '&gt;', 0)]"/>
+                <filter string="Équilibré" name="is_balanced" domain="[('is_balanced', '=', True)]"/>
+                <separator/>
+                <group>
+                    <filter string="Point de Vente" name="group_pos"
+                            domain="[]" context="{'group_by': 'pos_config_id'}"/>
+                    <filter string="Date" name="group_date"
+                            domain="[]" context="{'group_by': 'date:day'}"/>
+                    <filter string="Caissière" name="group_cashier"
+                            domain="[]" context="{'group_by': 'caissier_id'}"/>
+                    <filter string="Manager" name="group_manager"
+                            domain="[]" context="{'group_by': 'manager_id'}"/>
+                    <filter string="Statut" name="group_state"
+                            domain="[]" context="{'group_by': 'state'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ============================================================
+         ACTIONS
+    ============================================================ -->
+    <record id="action_cloture_caisse" model="ir.actions.act_window">
+        <field name="name">Clôtures de Caisse</field>
+        <field name="res_model">cloture.caisse</field>
+        <field name="view_mode">list,graph,pivot,form</field>
+        <field name="search_view_id" ref="view_cloture_caisse_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Créer une nouvelle clôture de caisse
+            </p>
+            <p>
+                Chargez les données depuis la session POS du jour,
+                saisissez le contrôle physique et approuvez la clôture.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_cloture_caisse_today" model="ir.actions.act_window">
+        <field name="name">Clôture du Jour</field>
+        <field name="res_model">cloture.caisse</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="view_cloture_caisse_search"/>
+        <field name="context">{'search_default_today': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Aucune clôture aujourd'hui : créez la clôture du jour
+            </p>
+            <p>
+                Chargez les données depuis la session POS du jour,
+                saisissez le contrôle physique et approuvez la clôture.
+            </p>
+        </field>
+    </record>
+
+</odoo>

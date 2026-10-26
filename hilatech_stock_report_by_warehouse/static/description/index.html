@@ -1,0 +1,599 @@
+<!--
+    Odoo Apps Store page - compatibility rules followed on purpose:
+    - ASCII only: accents are HTML entities.
+    - Inline CSS limited to the properties kept by Odoo's html_sanitize whitelist
+      (no flex, gap, box-shadow, position or "background" shorthand).
+    - Layout uses Bootstrap classes (container / row / col-*), available on the store.
+-->
+<div class="container" style="max-width:1140px; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#333333;">
+
+    <!-- ===================== LANGUAGE TABS ===================== -->
+    <ul class="nav nav-tabs justify-content-end" role="tablist" style="margin-top:16px;">
+        <li class="nav-item" role="presentation"><a class="nav-link active" href="#hl-en" data-bs-toggle="tab" data-bs-target="#hl-en" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">English</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" href="#hl-fr" data-bs-toggle="tab" data-bs-target="#hl-fr" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">Fran&ccedil;ais</a></li>
+    </ul>
+
+    <div class="tab-content">
+    <div class="tab-pane fade show active" id="hl-en" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Realtime Stock Report &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Realtime Stock Report by <span style="color:#FF7900;">Warehouse</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:720px; margin:0 auto 26px;">
+            Your realtime stock report by warehouse: live quantities in one column per warehouse, low stock in red,
+            printed as a PDF or exported to Excel in one click.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community &amp; Enterprise</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">PDF &amp; Excel</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">column per warehouse</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">2</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">export formats: PDF, Excel</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">5</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">units: low stock alert</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">Realtime stock, warehouse by warehouse</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Comparing stock between several warehouses in standard Odoo takes many filters and exports.
+            This module adds a <b style="color:#13283F;">realtime stock report by warehouse</b> to the Inventory app: every product with its
+            <b style="color:#13283F;">current quantity in each warehouse</b>, the total, and the products running low highlighted in red.
+            Print it as a <b style="color:#13283F;">PDF</b> or download it as an <b style="color:#13283F;">Excel</b> file, ready to share.
+        </p>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Key features</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">One column per warehouse</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Pivot view with products grouped by category in rows and one column per warehouse, plus the total.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Detailed list view</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Warehouse, location, unit, on hand, reserved and available quantities, and the total available across all warehouses.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Low stock in red</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Products under 5 units are highlighted in red in the list, the PDF and the Excel file.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">PDF report</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">A clean printable report: company logo, date, one column per warehouse, product totals and grand total.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Excel export</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">XLSX file with company logo, title, generation date, frozen header, one column per warehouse and totals.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">06</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Live data</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">The report reads the current stock directly: no computation to launch, no data to synchronize.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BUILT FOR ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Built for</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Distributors</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Retail Chains</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurants &amp; Hotels</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Wholesalers</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Any company with several warehouses</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">How it works</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Open the report</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Inventory &gt; Reporting &gt; Rapport de stock.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Analyse</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Pivot by warehouse or detailed list, with the usual Odoo filters and groupings.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Print or export</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Actions &gt; Imprimer PDF or Exporter Excel, for all lines or only the selected ones.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Screenshots</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto;"></div>
+    </div>
+
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Pivot: one column per warehouse</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Products grouped by category, quantity on hand in each warehouse and total.</div>
+        <img src="screenshots/pivot_by_warehouse.png" alt="Pivot: one column per warehouse" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Detailed list</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Warehouse, location, on hand, reserved and available quantities for every product.</div>
+        <img src="screenshots/list_view.png" alt="Detailed list" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Print PDF or export Excel</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">From the Actions menu, for all lines or only the selected ones.</div>
+        <img src="screenshots/actions_pdf_excel.png" alt="Print PDF or export Excel" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:48px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> The PDF report</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">One column per warehouse, totals, and low stock highlighted in red.</div>
+        <img src="screenshots/pdf_report.png" alt="The PDF report" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Technical information</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Odoo version</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community &amp; Enterprise</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Dependencies</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">stock</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Python library</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">openpyxl, for the Excel export (shipped with Odoo)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Access rights</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Menu for Inventory managers, report readable by Inventory users</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Interface language</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">French (report and export labels)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Configuration</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">None required &mdash; works right after installation</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">License</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Our Services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech supports you on your whole Odoo project.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Odoo Customization" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Customization</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Odoo Implementation" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Implementation</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; Maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; Maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Odoo Migration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Migration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Odoo Integration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Integration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Odoo Consulting" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Consulting</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Odoo Training" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Training</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="Dedicated Developer" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Dedicated Developer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Related Modules</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Other Hilatech apps for Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank"><img src="img/related_hilatech_purchase_dashboard.png" alt="Purchase Dashboard" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Purchase Dashboard</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Purchases, vendor debt, orders not received or not invoiced and top suppliers at a glance.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_restrick_salespos" target="_blank"><img src="img/related_hilatech_restrick_salespos.png" alt="POS Stock Restriction" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">POS Stock Restriction</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Block out-of-stock sales in the Point of Sale with a clear popup for the cashier.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_restrick_salespos" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_export_accounting_report" target="_blank"><img src="img/related_hilatech_export_accounting_report.png" alt="Export Accounting Reports to Excel" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Export Accounting Reports to Excel</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">12 Base Accounting Kit reports and your invoices exported to Excel in one click.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_export_accounting_report" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank"><img src="img/related_hilatech_cash_journal.png" alt="Cash Journal" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cash Journal</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Monthly cash statements, daily opening and closing, operations locked once the day is closed.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">See all Hilatech modules &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="hl-fr" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Rapport de stock en temps r&eacute;el &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Rapport de stock en temps r&eacute;el par <span style="color:#FF7900;">entrep&ocirc;t</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:720px; margin:0 auto 26px;">
+            Votre rapport de stock en temps r&eacute;el par entrep&ocirc;t : quantit&eacute;s actuelles avec une colonne par entrep&ocirc;t, stocks faibles en rouge,
+            imprim&eacute; en PDF ou export&eacute; vers Excel en un clic.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community &amp; Enterprise</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">PDF &amp; Excel</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">colonne par entrep&ocirc;t</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">2</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">formats d&#39;export : PDF, Excel</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">5</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">unit&eacute;s : alerte stock faible</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">Le stock en temps r&eacute;el, entrep&ocirc;t par entrep&ocirc;t</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Comparer le stock de plusieurs entrep&ocirc;ts dans Odoo standard demande beaucoup de filtres et d&#39;exports.
+            Ce module ajoute un <b style="color:#13283F;">rapport de stock en temps r&eacute;el par entrep&ocirc;t</b> &agrave; l&#39;application Inventaire : chaque produit avec sa
+            <b style="color:#13283F;">quantit&eacute; actuelle dans chaque entrep&ocirc;t</b>, le total, et les produits en rupture proche surlign&eacute;s en rouge.
+            Imprimez-le en <b style="color:#13283F;">PDF</b> ou t&eacute;l&eacute;chargez-le en fichier <b style="color:#13283F;">Excel</b>, pr&ecirc;t &agrave; partager.
+        </p>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Fonctionnalit&eacute;s cl&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Une colonne par entrep&ocirc;t</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Vue pivot avec les produits regroup&eacute;s par cat&eacute;gorie en lignes et une colonne par entrep&ocirc;t, plus le total.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Vue liste d&eacute;taill&eacute;e</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Entrep&ocirc;t, emplacement, unit&eacute;, quantit&eacute;s en stock, r&eacute;serv&eacute;e et disponible, et le total disponible tous entrep&ocirc;ts.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Stock faible en rouge</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Les produits sous 5 unit&eacute;s sont surlign&eacute;s en rouge dans la liste, le PDF et le fichier Excel.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Rapport PDF</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Un rapport propre &agrave; imprimer : logo de la soci&eacute;t&eacute;, date, une colonne par entrep&ocirc;t, totaux par produit et total g&eacute;n&eacute;ral.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Export Excel</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Fichier XLSX avec logo, titre, date de g&eacute;n&eacute;ration, en-t&ecirc;te fig&eacute;, une colonne par entrep&ocirc;t et totaux.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">06</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Donn&eacute;es en temps r&eacute;el</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Le rapport lit directement le stock actuel : aucun calcul &agrave; lancer, aucune donn&eacute;e &agrave; synchroniser.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BUILT FOR ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Con&ccedil;u pour</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Distributeurs</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Cha&icirc;nes de magasins</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurants &amp; h&ocirc;tels</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Grossistes</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Toute entreprise avec plusieurs entrep&ocirc;ts</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Comment &ccedil;a marche</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Ouvrez le rapport</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Inventaire &gt; Analyse &gt; Rapport de stock.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Analysez</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Pivot par entrep&ocirc;t ou liste d&eacute;taill&eacute;e, avec les filtres et regroupements habituels d&#39;Odoo.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Imprimez ou exportez</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Action &gt; Imprimer PDF ou Exporter Excel, pour toutes les lignes ou seulement la s&eacute;lection.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Captures d&#39;&eacute;cran</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto;"></div>
+    </div>
+
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Pivot : une colonne par entrep&ocirc;t</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Produits regroup&eacute;s par cat&eacute;gorie, quantit&eacute; en stock dans chaque entrep&ocirc;t et total.</div>
+        <img src="screenshots/pivot_by_warehouse.png" alt="Pivot: one column per warehouse" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Liste d&eacute;taill&eacute;e</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Entrep&ocirc;t, emplacement, quantit&eacute;s en stock, r&eacute;serv&eacute;e et disponible pour chaque produit.</div>
+        <img src="screenshots/list_view.png" alt="Detailed list" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Imprimer en PDF ou exporter vers Excel</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Depuis le menu Action, pour toutes les lignes ou seulement la s&eacute;lection.</div>
+        <img src="screenshots/actions_pdf_excel.png" alt="Print PDF or export Excel" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:48px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Le rapport PDF</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Une colonne par entrep&ocirc;t, les totaux, et les stocks faibles surlign&eacute;s en rouge.</div>
+        <img src="screenshots/pdf_report.png" alt="The PDF report" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Informations techniques</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Version d&#39;Odoo</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community &amp; Enterprise</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">D&eacute;pendances</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">stock</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Biblioth&egrave;que Python</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">openpyxl, pour l&#39;export Excel (fourni avec Odoo)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Droits d&#39;acc&egrave;s</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Menu pour les responsables Inventaire, rapport lisible par les utilisateurs Inventaire</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Langue de l&#39;interface</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Fran&ccedil;ais (libell&eacute;s du rapport et des exports)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Configuration</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Aucune requise &mdash; fonctionne d&egrave;s l&#39;installation</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">Licence</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Nos services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech vous accompagne sur tout votre projet Odoo.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Personnalisation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Personnalisation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Impl&eacute;mentation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Impl&eacute;mentation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Migration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Migration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Int&eacute;gration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Int&eacute;gration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Conseil Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Conseil Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Formation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Formation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="D&eacute;veloppeur d&eacute;di&eacute;" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">D&eacute;veloppeur d&eacute;di&eacute;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Modules associ&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Les autres applications Hilatech pour Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank"><img src="img/related_hilatech_purchase_dashboard.png" alt="Tableau de bord Achats" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Tableau de bord Achats</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Achats, dette fournisseurs, commandes non re&ccedil;ues ou non factur&eacute;es et meilleurs fournisseurs.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_restrick_salespos" target="_blank"><img src="img/related_hilatech_restrick_salespos.png" alt="Restriction de stock au POS" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Restriction de stock au POS</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Bloquez les ventes sans stock au point de vente avec un message clair pour le caissier.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_restrick_salespos" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_export_accounting_report" target="_blank"><img src="img/related_hilatech_export_accounting_report.png" alt="Export des rapports comptables vers Excel" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Export des rapports comptables vers Excel</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">12 rapports Base Accounting Kit et vos factures export&eacute;s vers Excel en un clic.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_export_accounting_report" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank"><img src="img/related_hilatech_cash_journal.png" alt="Journal de Caisse" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Journal de Caisse</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Relev&eacute;s de caisse mensuels, ouverture et cl&ocirc;ture quotidiennes, op&eacute;rations verrouill&eacute;es.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">Voir tous les modules Hilatech &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:46px 24px 30px; text-align:center; margin-bottom:24px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:210px; max-width:70%; height:auto; display:block; margin:0 auto 18px;"/>
+        <div style="color:#FFFFFF; font-size:24px; font-weight:700; margin-bottom:8px;">Need help or a custom report?</div>
+        <div style="color:#D5DDE8; font-size:15px; line-height:1.6; max-width:620px; margin:0 auto 24px;">
+            HILATECH &mdash; Odoo integrator. Support, implementation and custom Odoo development, in English and French.
+        </div>
+        <div style="margin-bottom:24px;">
+            <a href="mailto:support@hilatech.co" style="display:inline-block; background-color:#FF7900; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">support@hilatech.co</a>
+            <a href="https://hilatech.co/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#FFFFFF; color:#13283F; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">hilatech.co</a>
+            <a href="https://api.whatsapp.com/send?phone=237694846159" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#25D366; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">WhatsApp</a>
+        </div>
+        <div style="border-top:1px solid #2C4866; padding-top:18px; color:#9FB0C4; font-size:13px;">
+            &copy; 2026 HILATECH &mdash; Digitalisez. Optimisez. Excellez.
+        </div>
+    </div>
+
+</div>

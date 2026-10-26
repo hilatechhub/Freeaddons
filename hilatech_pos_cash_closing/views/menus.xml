@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Sous-menu dans Point de Vente -->
+    <menuitem id="menu_cloture_caisse_main"
+              name="Clôture de Caisse"
+              parent="point_of_sale.menu_point_root"
+              sequence="3"
+              groups="point_of_sale.group_pos_manager"/>
+
+    <!-- Entrées -->
+    <menuitem id="menu_cloture_caisse"
+              name="Toutes les Clôtures"
+              parent="menu_cloture_caisse_main"
+              action="action_cloture_caisse"
+              sequence="10"/>
+
+    <menuitem id="menu_cloture_caisse_today"
+              name="Clôture du Jour"
+              parent="menu_cloture_caisse_main"
+              action="action_cloture_caisse_today"
+              sequence="5"/>
+
+</odoo>

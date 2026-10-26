@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_stock_inventory_document">
+        <!-- Odoo 19 : "company" n'est plus fourni au corps du rapport par
+             external_layout ; on le définit avant l'appel (logo, en-tête). -->
+        <t t-set="company" t-value="res_company"/>
+        <t t-call="web.external_layout">
+            <div class="page">
+
+                <!-- Logo société centré -->
+                <div class="row mb-2">
+                    <div class="col-12" style="text-align:center;">
+                        <t t-if="company.logo">
+                            <img t-att-src="image_data_uri(company.logo)"
+                                 style="max-height:90px; max-width:280px; display:inline-block;"/>
+                        </t>
+                    </div>
+                </div>
+
+                <!-- Séparateur rouge -->
+                <div style="border-top:3px solid #C0392B; margin-bottom:10px;"></div>
+
+                <!-- Titre -->
+                <div class="row mb-3">
+                    <div class="col-12 text-center">
+                        <h2 style="color:#C0392B;">
+                            <strong>
+                                RAPPORT DE STOCK PAR ENTREPÔT
+                                <t t-if="docs[0].date_filter">
+                                    du <t t-esc="docs[0].date_filter.strftime('%d/%m/%Y')"/>
+                                </t>
+                                <t t-else="">
+                                    du <t t-esc="context_timestamp(datetime.datetime.now()).strftime('%d/%m/%Y')"/>
+                                </t>
+                            </strong>
+                        </h2>
+                        <small class="text-muted">
+                            Produits : <strong><t t-esc="len(docs.mapped('product_id'))"/></strong>
+                        </small>
+                    </div>
+                </div>
+
+                <!-- Calcul des données pivot -->
+                <t t-set="warehouses" t-value="docs.mapped('warehouse_id').sorted('name')"/>
+                <t t-set="locations"  t-value="docs.mapped('location_id').sorted('name')"/>
+                <t t-set="products"   t-value="docs.mapped('product_id').sorted('display_name')"/>
+
+                <!-- Tableau pivot : 1 ligne par produit, 1 colonne par entrepôt avec emplacements -->
+                <table class="table table-sm table-bordered o_main_table" style="font-size:11px;">
+                    <thead>
+                        <tr style="background-color:#C0392B; color:white;">
+                            <th style="width:auto;" class="text-left">Produit</th>
+                            <th style="width:13%;" class="text-left">Catégorie</th>
+                            <th style="width:6%;" class="text-center">U.M.</th>
+                            <t t-foreach="warehouses" t-as="wh">
+                                <th class="text-center">
+                                    <t t-esc="wh.name"/>
+                                </th>
+                            </t>
+                            <th class="text-right" style="background-color:#7B241C;">Total Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="products" t-as="product">
+                            <t t-set="prod_recs" t-value="docs.filtered(lambda r: r.product_id.id == product.id)"/>
+                            <t t-set="meta" t-value="prod_recs[0]"/>
+                            <t t-set="prod_total" t-value="sum(prod_recs.mapped('quantity'))"/>
+                            <tr t-att-style="'background-color:#FFCCCC;' if prod_total &lt; 5 else ('background-color:#FFF5F5;' if product_index % 2 == 0 else '')">
+                                <td>
+                                    <t t-esc="product.display_name"/>
+                                </td>
+                                <td>
+                                    <t t-esc="meta.categ_id.name"/>
+                                </td>
+                                <td class="text-center">
+                                    <t t-esc="meta.uom_id.name"/>
+                                </td>
+                                <t t-foreach="warehouses" t-as="wh">
+                                    <t t-set="wh_rec" t-value="prod_recs.filtered(lambda r: r.warehouse_id.id == wh.id)"/>
+                                    <td class="text-right">
+                                        <t t-if="wh_rec">
+                                            <t t-esc="'%.3f' % sum(wh_rec.mapped('quantity'))"/>
+                                        </t>
+                                        <t t-else="">
+                                            <span class="text-muted">-</span>
+                                        </t>
+                                    </td>
+                                </t>
+                                <td class="text-right" style="font-weight:bold;">
+                                    <t t-esc="'%.3f' % prod_total"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                    <tfoot>
+                        <tr style="background-color:#FADBD8; font-weight:bold; font-size:10px;">
+                            <td colspan="3" class="text-right">
+                                <strong>TOTAL</strong>
+                            </td>
+                            <t t-foreach="warehouses" t-as="wh">
+                                <t t-set="wh_all" t-value="docs.filtered(lambda r: r.warehouse_id.id == wh.id)"/>
+                                <td class="text-right">
+                                    <strong>
+                                        <t t-esc="'%.3f' % sum(wh_all.mapped('quantity'))"/>
+                                    </strong>
+                                </td>
+                            </t>
+                            <td class="text-right" style="background-color:#F1948A;">
+                                <strong>
+                                    <t t-esc="'%.3f' % sum(docs.mapped('quantity'))"/>
+                                </strong>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="report_stock_inventory">
+        <t t-call="web.html_container">
+            <t t-call="hilatech_stock_report_by_warehouse.report_stock_inventory_document"/>
+        </t>
+    </template>
+
+</odoo>

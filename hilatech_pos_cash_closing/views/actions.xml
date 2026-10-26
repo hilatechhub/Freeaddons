@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ============================================================
+         ACTION SERVEUR : Exporter les clôtures en Excel
+    ============================================================ -->
+    <record id="action_export_cloture_caisse_excel" model="ir.actions.server">
+        <field name="name">📊 Exporter en Excel</field>
+        <field name="model_id" ref="model_cloture_caisse"/>
+        <field name="binding_model_id" ref="model_cloture_caisse"/>
+        <field name="state">code</field>
+        <field name="code">
+action = records.action_export_to_excel()
+        </field>
+    </record>
+
+    <!-- ============================================================
+         ACTION SERVEUR : Exporter le détail en Excel
+    ============================================================ -->
+    <record id="action_export_detail_cloture_caisse_excel" model="ir.actions.server">
+        <field name="name">📊 Exporter Détail Excel</field>
+        <field name="model_id" ref="model_cloture_caisse"/>
+        <field name="binding_model_id" ref="model_cloture_caisse"/>
+        <field name="state">code</field>
+        <field name="code">
+action = records.action_export_detail_to_excel()
+        </field>
+    </record>
+
+</odoo>

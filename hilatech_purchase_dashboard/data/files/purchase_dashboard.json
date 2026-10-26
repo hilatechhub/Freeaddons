@@ -1,0 +1,727 @@
+{
+  "version": "18.5.10",
+  "sheets": [
+    {
+      "id": "pur-dash-sheet-001",
+      "name": "Dashboard",
+      "colNumber": 11,
+      "rowNumber": 80,
+      "rows": {
+        "8": {
+          "size": 36
+        },
+        "27": {
+          "size": 36
+        },
+        "43": {
+          "size": 36
+        }
+      },
+      "cols": {},
+      "merges": [],
+      "cells": {
+        "B9": "=_t(\"Top fournisseurs (montant achats)\")",
+        "B28": "=_t(\"Evolution des achats par catégorie\")",
+        "B44": "=_t(\"Total dette par fournisseur\")"
+      },
+      "styles": {
+        "B9": 1,
+        "B28": 1,
+        "B44": 1
+      },
+      "formats": {},
+      "borders": {
+        "B9:K9": 1,
+        "B10:K10": 2,
+        "B28:K28": 1,
+        "B29:K29": 2,
+        "B44:K44": 1,
+        "B45:K45": 2
+      },
+      "conditionalFormats": [],
+      "dataValidationRules": [],
+      "figures": [
+        {
+          "id": "pur-sc-001",
+          "width": 200,
+          "height": 108,
+          "tag": "chart",
+          "data": {
+            "baselineColorDown": "#EA6175",
+            "baselineColorUp": "#43C5B1",
+            "baselineMode": "difference",
+            "title": {
+              "text": "Bons de commande",
+              "bold": true,
+              "color": "#434343"
+            },
+            "type": "scorecard",
+            "background": "#EFF6FF",
+            "keyValue": "Data!B2",
+            "humanize": false,
+            "chartId": "pur-sc-001"
+          },
+          "offset": {
+            "x": 207,
+            "y": 30
+          },
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "pur-sc-002",
+          "width": 200,
+          "height": 108,
+          "tag": "chart",
+          "data": {
+            "baselineColorDown": "#EA6175",
+            "baselineColorUp": "#43C5B1",
+            "baselineMode": "difference",
+            "title": {
+              "text": "Total achats",
+              "bold": true,
+              "color": "#434343"
+            },
+            "type": "scorecard",
+            "background": "#FFF7ED",
+            "keyValue": "Data!B3",
+            "humanize": true,
+            "chartId": "pur-sc-002"
+          },
+          "offset": {
+            "x": 0,
+            "y": 30
+          },
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "pur-sc-003",
+          "width": 200,
+          "height": 108,
+          "tag": "chart",
+          "data": {
+            "baselineColorDown": "#EA6175",
+            "baselineColorUp": "#43C5B1",
+            "baselineMode": "difference",
+            "title": {
+              "text": "Dette fournisseurs",
+              "bold": true,
+              "color": "#434343"
+            },
+            "type": "scorecard",
+            "background": "#FEF2F2",
+            "keyValue": "Data!B4",
+            "humanize": true,
+            "chartId": "pur-sc-003"
+          },
+          "offset": {
+            "x": 414,
+            "y": 30
+          },
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "pur-sc-004",
+          "width": 200,
+          "height": 108,
+          "tag": "chart",
+          "data": {
+            "baselineColorDown": "#EA6175",
+            "baselineColorUp": "#43C5B1",
+            "baselineMode": "difference",
+            "title": {
+              "text": "BC non reçus",
+              "bold": true,
+              "color": "#434343"
+            },
+            "type": "scorecard",
+            "background": "#FEF9C3",
+            "keyValue": "Data!B5",
+            "humanize": false,
+            "chartId": "pur-sc-004"
+          },
+          "offset": {
+            "x": 621,
+            "y": 30
+          },
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "pur-sc-005",
+          "width": 200,
+          "height": 108,
+          "tag": "chart",
+          "data": {
+            "baselineColorDown": "#EA6175",
+            "baselineColorUp": "#43C5B1",
+            "baselineMode": "difference",
+            "title": {
+              "text": "BC non facturés",
+              "bold": true,
+              "color": "#434343"
+            },
+            "type": "scorecard",
+            "background": "#F0FDF4",
+            "keyValue": "Data!C2",
+            "humanize": false,
+            "chartId": "pur-sc-005"
+          },
+          "offset": {
+            "x": 828,
+            "y": 30
+          },
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "pur-chart-001",
+          "width": 1027,
+          "height": 370,
+          "tag": "chart",
+          "data": {
+            "type": "bar",
+            "dataSetsHaveTitle": true,
+            "dataSets": [
+              {
+                "dataRange": "Data!B6:B15",
+                "yAxisId": "y",
+                "label": "Total achats",
+                "type": "bar"
+              }
+            ],
+            "legendPosition": "none",
+            "labelRange": "Data!A6:A15",
+            "title": {
+              "text": ""
+            },
+            "aggregated": false,
+            "axesDesign": {
+              "y": {
+                "title": {
+                  "text": "Montant"
+                }
+              }
+            },
+            "showValues": false,
+            "humanize": true,
+            "chartId": "pur-chart-001"
+          },
+          "offset": {
+            "x": 0,
+            "y": 315
+          },
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "pur-chart-002",
+          "width": 1027,
+          "height": 370,
+          "tag": "chart",
+          "data": {
+            "type": "bar",
+            "dataSetsHaveTitle": true,
+            "dataSets": [
+              {
+                "dataRange": "Data!B18:B27",
+                "yAxisId": "y",
+                "label": "Total achats",
+                "type": "bar"
+              }
+            ],
+            "legendPosition": "none",
+            "labelRange": "Data!A18:A27",
+            "title": {
+              "text": "Evolution des achats par catégorie"
+            },
+            "aggregated": false,
+            "axesDesign": {
+              "y": {
+                "title": {
+                  "text": "Montant"
+                }
+              }
+            },
+            "showValues": false,
+            "humanize": true,
+            "chartId": "pur-chart-002"
+          },
+          "offset": {
+            "x": 0,
+            "y": 736
+          },
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "pur-chart-003",
+          "width": 1027,
+          "height": 370,
+          "tag": "chart",
+          "data": {
+            "type": "bar",
+            "dataSetsHaveTitle": true,
+            "dataSets": [
+              {
+                "dataRange": "Data!B29:B38",
+                "yAxisId": "y",
+                "label": "Dette",
+                "type": "bar"
+              }
+            ],
+            "legendPosition": "none",
+            "labelRange": "Data!A29:A38",
+            "title": {
+              "text": "Total dette par fournisseur"
+            },
+            "aggregated": false,
+            "axesDesign": {
+              "y": {
+                "title": {
+                  "text": "Montant dû"
+                }
+              }
+            },
+            "showValues": false,
+            "humanize": true,
+            "chartId": "pur-chart-003"
+          },
+          "offset": {
+            "x": 0,
+            "y": 1160
+          },
+          "col": 0,
+          "row": 0
+        }
+      ],
+      "tables": []
+    },
+    {
+      "id": "pur-data-sheet-001",
+      "name": "Data",
+      "colNumber": 5,
+      "rowNumber": 50,
+      "rows": {},
+      "cols": {
+        "0": {
+          "size": 220
+        },
+        "1": {
+          "size": 150
+        }
+      },
+      "merges": [],
+      "cells": {
+        "A1": "Mesure",
+        "B1": "Valeur",
+        "A2": "Bons de commande",
+        "B2": "=PIVOT.VALUE(1,\"__count:sum\")",
+        "A3": "Total achats",
+        "B3": "=PIVOT.VALUE(1,\"amount_total:sum\")",
+        "A4": "Dette fournisseurs",
+        "B4": "=PIVOT.VALUE(3,\"amount_residual:sum\")",
+        "A5": "BC non reçus",
+        "B5": "=PIVOT.VALUE(5,\"__count:sum\")",
+        "C1": "Valeur2",
+        "C2": "=PIVOT.VALUE(7,\"__count:sum\")",
+        "A6": "=CHOOSECOLS(PIVOT(2,10,FALSE,FALSE),1)",
+        "B6": "=CHOOSECOLS(PIVOT(2,10,FALSE,FALSE),2)",
+        "A18": "=CHOOSECOLS(PIVOT(4,10,FALSE,FALSE),1)",
+        "B18": "=CHOOSECOLS(PIVOT(4,10,FALSE,FALSE),2)",
+        "A29": "=CHOOSECOLS(PIVOT(6,10,FALSE,FALSE),1)",
+        "B29": "=CHOOSECOLS(PIVOT(6,10,FALSE,FALSE),2)"
+      },
+      "styles": {},
+      "formats": {},
+      "borders": {},
+      "conditionalFormats": [],
+      "dataValidationRules": [],
+      "figures": [],
+      "tables": []
+    }
+  ],
+  "globalFilters": [
+    {
+      "id": "d4e5f6a7-b8c9-4012-8345-678901234567",
+      "type": "date",
+      "label": "Période",
+      "defaultValue": "this_month"
+    },
+    {
+      "id": "e5f6a7b8-c9d0-4123-9456-789012345678",
+      "type": "relation",
+      "label": "Fournisseur",
+      "modelName": "res.partner",
+      "defaultValueDisplayNames": []
+    }
+  ],
+  "styles": {
+    "1": {
+      "textColor": "#01666b",
+      "fontSize": 16,
+      "bold": true
+    }
+  },
+  "formats": {},
+  "borders": {
+    "1": {
+      "bottom": {
+        "style": "thin",
+        "color": "#CCCCCC"
+      }
+    },
+    "2": {
+      "top": {
+        "style": "thin",
+        "color": "#CCCCCC"
+      }
+    }
+  },
+  "chartOdooMenusReferences": {
+    "pur-sc-001": "hilatech_purchase_dashboard.menu_dashboard_po_confirmed",
+    "pur-sc-002": "hilatech_purchase_dashboard.menu_dashboard_po_confirmed",
+    "pur-sc-003": "hilatech_purchase_dashboard.menu_dashboard_vendor_debt",
+    "pur-sc-004": "hilatech_purchase_dashboard.menu_dashboard_po_not_received",
+    "pur-sc-005": "hilatech_purchase_dashboard.menu_dashboard_po_not_invoiced",
+    "pur-chart-001": "hilatech_purchase_dashboard.menu_dashboard_po_confirmed",
+    "pur-chart-002": "purchase.menu_purchase_form_action",
+    "pur-chart-003": "hilatech_purchase_dashboard.menu_dashboard_vendor_debt"
+  },
+  "revisionId": "START_REVISION",
+  "uniqueFigureIds": true,
+  "settings": {
+    "locale": {
+      "name": "English (US)",
+      "code": "en_US",
+      "thousandsSeparator": ",",
+      "decimalSeparator": ".",
+      "dateFormat": "mm/dd/yyyy",
+      "timeFormat": "hh:mm:ss",
+      "formulaArgSeparator": ",",
+      "weekStart": 7
+    }
+  },
+  "pivots": {
+    "pur-pivot-001": {
+      "type": "ODOO",
+      "domain": [
+        [
+          "state",
+          "in",
+          [
+            "purchase",
+            "done"
+          ]
+        ]
+      ],
+      "context": {},
+      "sortedColumn": null,
+      "measures": [
+        {
+          "id": "__count:sum",
+          "fieldName": "__count",
+          "aggregator": "sum"
+        },
+        {
+          "id": "amount_total:sum",
+          "fieldName": "amount_total",
+          "aggregator": "sum"
+        }
+      ],
+      "model": "purchase.order",
+      "columns": [],
+      "rows": [],
+      "name": "Bons de commande",
+      "formulaId": "1",
+      "actionXmlId": "purchase.purchase_form_action",
+      "fieldMatching": {
+        "d4e5f6a7-b8c9-4012-8345-678901234567": {
+          "chain": "date_order",
+          "type": "datetime",
+          "offset": 0
+        },
+        "e5f6a7b8-c9d0-4123-9456-789012345678": {
+          "chain": "partner_id",
+          "type": "many2one"
+        }
+      }
+    },
+    "pur-pivot-002": {
+      "type": "ODOO",
+      "domain": [
+        [
+          "state",
+          "in",
+          [
+            "purchase",
+            "done"
+          ]
+        ]
+      ],
+      "context": {},
+      "sortedColumn": {
+        "measure": "amount_total:sum",
+        "order": "desc",
+        "domain": []
+      },
+      "measures": [
+        {
+          "id": "amount_total:sum",
+          "fieldName": "amount_total",
+          "aggregator": "sum"
+        }
+      ],
+      "model": "purchase.order",
+      "columns": [],
+      "rows": [
+        {
+          "fieldName": "partner_id",
+          "order": "asc"
+        }
+      ],
+      "name": "Achats par fournisseur",
+      "formulaId": "2",
+      "actionXmlId": "purchase.purchase_form_action",
+      "fieldMatching": {
+        "d4e5f6a7-b8c9-4012-8345-678901234567": {
+          "chain": "date_order",
+          "type": "datetime",
+          "offset": 0
+        },
+        "e5f6a7b8-c9d0-4123-9456-789012345678": {
+          "chain": "partner_id",
+          "type": "many2one"
+        }
+      }
+    },
+    "pur-pivot-003": {
+      "type": "ODOO",
+      "domain": [
+        [
+          "move_type",
+          "=",
+          "in_invoice"
+        ],
+        [
+          "state",
+          "=",
+          "posted"
+        ],
+        [
+          "payment_state",
+          "in",
+          [
+            "not_paid",
+            "partial"
+          ]
+        ]
+      ],
+      "context": {},
+      "sortedColumn": null,
+      "measures": [
+        {
+          "id": "amount_residual:sum",
+          "fieldName": "amount_residual",
+          "aggregator": "sum"
+        }
+      ],
+      "model": "account.move",
+      "columns": [],
+      "rows": [],
+      "name": "Dette fournisseurs",
+      "formulaId": "3",
+      "actionXmlId": "account.action_move_in_invoice_type",
+      "fieldMatching": {
+        "d4e5f6a7-b8c9-4012-8345-678901234567": {
+          "chain": "invoice_date",
+          "type": "date",
+          "offset": 0
+        },
+        "e5f6a7b8-c9d0-4123-9456-789012345678": {
+          "chain": "partner_id",
+          "type": "many2one"
+        }
+      }
+    },
+    "pur-pivot-004": {
+      "type": "ODOO",
+      "domain": [
+        [
+          "order_id.state",
+          "in",
+          [
+            "purchase",
+            "done"
+          ]
+        ]
+      ],
+      "context": {},
+      "sortedColumn": {
+        "measure": "price_subtotal:sum",
+        "order": "desc",
+        "domain": []
+      },
+      "measures": [
+        {
+          "id": "price_subtotal:sum",
+          "fieldName": "price_subtotal",
+          "aggregator": "sum"
+        }
+      ],
+      "model": "purchase.order.line",
+      "columns": [],
+      "rows": [
+        {
+          "fieldName": "product_id.categ_id",
+          "order": "asc"
+        }
+      ],
+      "name": "Achats par catégorie",
+      "formulaId": "4",
+      "actionXmlId": "purchase.purchase_form_action",
+      "fieldMatching": {
+        "d4e5f6a7-b8c9-4012-8345-678901234567": {
+          "chain": "order_id.date_order",
+          "type": "datetime",
+          "offset": 0
+        },
+        "e5f6a7b8-c9d0-4123-9456-789012345678": {
+          "chain": "order_id.partner_id",
+          "type": "many2one"
+        }
+      }
+    },
+    "pur-pivot-005": {
+      "type": "ODOO",
+      "domain": [
+        [
+          "state",
+          "=",
+          "purchase"
+        ],
+        [
+          "receipt_status",
+          "in",
+          [
+            "nothing",
+            "partial"
+          ]
+        ]
+      ],
+      "context": {},
+      "sortedColumn": null,
+      "measures": [
+        {
+          "id": "__count:sum",
+          "fieldName": "__count",
+          "aggregator": "sum"
+        }
+      ],
+      "model": "purchase.order",
+      "columns": [],
+      "rows": [],
+      "name": "BC non reçus",
+      "formulaId": "5",
+      "actionXmlId": "purchase.purchase_form_action",
+      "fieldMatching": {}
+    },
+    "pur-pivot-006": {
+      "type": "ODOO",
+      "domain": [
+        [
+          "move_type",
+          "=",
+          "in_invoice"
+        ],
+        [
+          "state",
+          "=",
+          "posted"
+        ],
+        [
+          "payment_state",
+          "in",
+          [
+            "not_paid",
+            "partial"
+          ]
+        ]
+      ],
+      "context": {},
+      "sortedColumn": {
+        "measure": "amount_residual:sum",
+        "order": "desc",
+        "domain": []
+      },
+      "measures": [
+        {
+          "id": "amount_residual:sum",
+          "fieldName": "amount_residual",
+          "aggregator": "sum"
+        }
+      ],
+      "model": "account.move",
+      "columns": [],
+      "rows": [
+        {
+          "fieldName": "partner_id",
+          "order": "asc"
+        }
+      ],
+      "name": "Dette par fournisseur",
+      "formulaId": "6",
+      "actionXmlId": "account.action_move_in_invoice_type",
+      "fieldMatching": {
+        "d4e5f6a7-b8c9-4012-8345-678901234567": {
+          "chain": "invoice_date",
+          "type": "date",
+          "offset": 0
+        },
+        "e5f6a7b8-c9d0-4123-9456-789012345678": {
+          "chain": "partner_id",
+          "type": "many2one"
+        }
+      }
+    },
+    "pur-pivot-007": {
+      "type": "ODOO",
+      "domain": [
+        [
+          "state",
+          "in",
+          [
+            "purchase",
+            "done"
+          ]
+        ],
+        [
+          "invoice_status",
+          "in",
+          [
+            "nothing",
+            "to invoice"
+          ]
+        ]
+      ],
+      "context": {},
+      "sortedColumn": null,
+      "measures": [
+        {
+          "id": "__count:sum",
+          "fieldName": "__count",
+          "aggregator": "sum"
+        }
+      ],
+      "model": "purchase.order",
+      "columns": [],
+      "rows": [],
+      "name": "BC non facturés",
+      "formulaId": "7",
+      "actionXmlId": "purchase.purchase_form_action",
+      "fieldMatching": {}
+    }
+  }
+}

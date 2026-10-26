@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Commandes POS : colonnes Serveur et Caissier -->
+    <record id="view_pos_order_tree_staff" model="ir.ui.view">
+        <field name="name">pos.order.list.staff</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='amount_total']" position="before">
+                <field name="server_name" string="Serveur" optional="show"/>
+                <field name="cashier_name" string="Caissier" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Formulaire : serveur et caissier près du client -->
+    <record id="view_pos_order_form_staff" model="ir.ui.view">
+        <field name="name">pos.order.form.staff</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="server_name" string="Serveur" readonly="1"/>
+                <field name="cashier_name" string="Caissier" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Recherche et regroupement par serveur / caissier -->
+    <record id="view_pos_order_filter_staff" model="ir.ui.view">
+        <field name="name">pos.order.filter.staff</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='customer']" position="after">
+                <filter string="Serveur" name="group_by_staff_server" domain="[]" context="{'group_by': 'server_name'}"/>
+                <filter string="Caissier" name="group_by_staff_cashier" domain="[]" context="{'group_by': 'cashier_name'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Commandes payées (ouvertes en cliquant sur les graphiques du tableau de bord) -->
+    <record id="action_staff_paid_orders" model="ir.actions.act_window">
+        <field name="name">Ventes par serveur et caissier</field>
+        <field name="res_model">pos.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('state', 'in', ['paid', 'done', 'invoiced'])]</field>
+        <field name="context">{'search_default_group_by_staff_server': 1}</field>
+    </record>
+    <menuitem id="menu_staff_paid_orders"
+        name="Ventes par serveur et caissier"
+        parent="point_of_sale.menu_point_rep"
+        action="action_staff_paid_orders"
+        sequence="60"/>
+
+</odoo>

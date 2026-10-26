@@ -1,0 +1,763 @@
+<!--
+    Odoo Apps Store page - compatibility rules followed on purpose:
+    - ASCII only: accents are HTML entities.
+    - Inline CSS limited to the properties kept by Odoo's html_sanitize whitelist
+      (no flex, gap, box-shadow, position or "background" shorthand).
+    - Layout uses Bootstrap classes (container / row / col-*), available on the store.
+-->
+<div class="container" style="max-width:1140px; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#333333;">
+
+    <!-- ===================== LANGUAGE TABS ===================== -->
+    <ul class="nav nav-tabs justify-content-end" role="tablist" style="margin-top:16px;">
+        <li class="nav-item" role="presentation"><a class="nav-link active" href="#hl-en" data-bs-toggle="tab" data-bs-target="#hl-en" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">English</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" href="#hl-fr" data-bs-toggle="tab" data-bs-target="#hl-fr" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">Fran&ccedil;ais</a></li>
+    </ul>
+
+    <div class="tab-content">
+    <div class="tab-pane fade show active" id="hl-en" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Point of Sale &nbsp;&bull;&nbsp; Restaurant KPI &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Restaurant KPI <span style="color:#FF7900;">Dashboards</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:760px; margin:0 auto 26px;">
+            Sales, average ticket, best waiters and cashiers, customer invoices and debt, delivery sales
+            and treasury: every KPI to run your restaurant, ready to use in Odoo.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community &amp; Enterprise</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Restaurant &amp; Bar</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">5</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">dashboards, including 1 optional</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">30+</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">management KPIs</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">card per bank or cash journal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">Run your restaurant with figures</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Everything a restaurant manager needs to follow, in <b style="color:#13283F;">four Odoo dashboards</b>: what you sell and when,
+            <b style="color:#13283F;">who sells best</b>, <b style="color:#13283F;">who owes you money</b>, how much the <b style="color:#13283F;">deliveries</b> bring in and how much
+            <b style="color:#13283F;">cash</b> you have in each account, plus an optional <b style="color:#13283F;">expenses</b> dashboard. Every dashboard has a date filter and opens the underlying
+            orders, invoices or payments in one click.
+        </p>
+    </div>
+
+    <!-- ===================== DASHBOARDS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Four dashboards, plus one optional</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Restaurant KPI</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Dashboards &gt; Sales</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Total sales, average sale per order and per guest</li>
+                        <li style="margin-bottom:6px;">Number of orders and cancelled orders</li>
+                        <li style="margin-bottom:6px;">Sales per hour and per day of the week, with the average ticket</li>
+                        <li style="margin-bottom:6px;">Top products and top categories</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Waiter &amp; cashier leaderboard</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Dashboards &gt; Sales &gt; Stat Serveur</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Best waiter and best cashier by revenue</li>
+                        <li style="margin-bottom:6px;">Best waiter and best cashier by number of orders</li>
+                        <li style="margin-bottom:6px;">Top waiters and top cashiers charts</li>
+                        <li style="margin-bottom:6px;">Waiter and cashier recorded on every POS order</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Invoices &amp; customer debt</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Dashboards &gt; Finance</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Total invoiced and average invoice</li>
+                        <li style="margin-bottom:6px;">Customer debt: unpaid invoices and amount due</li>
+                        <li style="margin-bottom:6px;">Delivery sales: paid invoices of your delivery customers</li>
+                        <li style="margin-bottom:6px;">Invoiced by month, top invoices, countries and categories</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Treasury</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Dashboards &gt; Finance</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">POS sales, purchases (and paid expenses) and balance</li>
+                        <li style="margin-bottom:6px;">One card per bank, mobile money and cash journal</li>
+                        <li style="margin-bottom:6px;">Total treasury of all your accounts</li>
+                        <li style="margin-bottom:6px;">New journals are added to the dashboard automatically</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Expense tracking (optional)</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Dashboards &gt; Finance &gt; Suivi des d&eacute;penses</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Total expenses and number of expense reports</li>
+                        <li style="margin-bottom:6px;">Draft, to validate and to reimburse amounts</li>
+                        <li style="margin-bottom:6px;">Expenses by month and category, top expenses and top employees</li>
+                        <li style="margin-bottom:6px;">Created automatically when the Expenses app is installed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BENEFITS ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">What it brings to your restaurant</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-top:4px solid #28A745; border-radius:12px; padding:20px 22px; height:100%;">
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;"><span style="color:#28A745;">&#10004;</span> Decide with real figures</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Know your peak hours, best products and average ticket to adjust staff, menu and opening hours.</div>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-top:4px solid #28A745; border-radius:12px; padding:20px 22px; height:100%;">
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;"><span style="color:#28A745;">&#10004;</span> Motivate your team</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">The waiter and cashier leaderboard gives an objective basis for bonuses, challenges and the employee of the month.</div>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-top:4px solid #28A745; border-radius:12px; padding:20px 22px; height:100%;">
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;"><span style="color:#28A745;">&#10004;</span> Collect what you are owed</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Customer debt is visible at a glance, with the list of unpaid invoices ready to follow up.</div>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-top:4px solid #28A745; border-radius:12px; padding:20px 22px; height:100%;">
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;"><span style="color:#28A745;">&#10004;</span> Know your cash position</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Treasury per bank, mobile money and cash journal, without opening the accounting reports.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BUILT FOR ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Built for</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurant Owners</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Bars &amp; Cafes</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Fast Food &amp; Delivery</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Managers &amp; Accountants</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurant groups</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">How it works</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Install</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">The dashboards are created in Dashboards, under Sales and Finance.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Sell and invoice as usual</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Waiters and cashiers are recorded on POS orders. Flag your delivery customers.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Open your dashboards</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Choose the period and click any figure to see the orders, invoices or payments.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Screenshots</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto;"></div>
+    </div>
+
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Restaurant KPI dashboard</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Total sales, average sale per order and per guest, cancelled orders, sales per hour and per day, top products.</div>
+        <img src="screenshots/restaurant_kpi_dashboard.png" alt="Restaurant KPI dashboard" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Best waiter and best cashier</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">The four &quot;best of&quot; tiles and the top waiters by revenue.</div>
+        <img src="screenshots/leaderboard_best_staff.png" alt="Best waiter and best cashier" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Top cashiers and most active waiters</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Revenue cashed by each cashier and number of orders served by each waiter.</div>
+        <img src="screenshots/charts_cashiers_orders.png" alt="Top cashiers and most active waiters" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Invoices, customer debt and delivery sales</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Total invoiced, average invoice, customer debt with the amount due, delivery sales and invoiced by month.</div>
+        <img src="screenshots/invoices_debt_delivery.png" alt="Invoices, customer debt and delivery sales" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Customer debt: unpaid invoices</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Invoicing &gt; Customers &gt; Dette client: every unpaid or partially paid customer invoice.</div>
+        <img src="screenshots/customer_debt_list.png" alt="Customer debt: unpaid invoices" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Flag your delivery customers</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Tick Client livraison on the contact: its paid invoices feed the delivery sales card.</div>
+        <img src="screenshots/delivery_customer_flag.png" alt="Flag your delivery customers" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Treasury dashboard</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">POS sales, vendor bills, balance and one card per bank, mobile money and cash journal.</div>
+        <img src="screenshots/treasury_dashboard.png" alt="Treasury dashboard" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Expense tracking (optional)</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">With the Expenses app: total, draft, to validate and to reimburse, expenses by category and by employee.</div>
+        <img src="screenshots/expense_dashboard.png" alt="Expense tracking (optional)" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:48px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Sales per waiter in the back office</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Point of Sale &gt; Reporting &gt; Ventes par serveur et caissier, grouped by waiter with totals.</div>
+        <img src="screenshots/backoffice_by_waiter.png" alt="Sales per waiter in the back office" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Technical information</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Odoo version</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community &amp; Enterprise</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Dependencies</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">point_of_sale, pos_restaurant, account, spreadsheet_dashboard</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Optional</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">hr_expense (Expenses app, not required): expense tracking dashboard and expenses in the treasury</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Location</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Dashboards &gt; Sales (Restaurant KPI, Stat Serveur) and Dashboards &gt; Finance (Factures &amp; dette client, Tr&eacute;sorerie, Suivi des d&eacute;penses)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Access rights</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">POS managers, POS users, invoicing users, accounting managers and expense managers, depending on the dashboard</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Recorded data</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Waiter and cashier names on each POS order, from installation onwards</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Interface language</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">French (dashboard titles and menu labels)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Compatibility</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Can be installed with the Hilatech POS printing modules</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">License</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Our Services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech supports you on your whole Odoo project.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Odoo Customization" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Customization</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Odoo Implementation" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Implementation</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; Maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; Maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Odoo Migration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Migration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Odoo Integration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Integration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Odoo Consulting" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Consulting</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Odoo Training" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Training</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="Dedicated Developer" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Dedicated Developer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Related Modules</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Other Hilatech apps for Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank"><img src="img/related_hilatech_pos_cash_closing.png" alt="POS Cash Closing" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">POS Cash Closing</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Daily cash count vs Odoo per payment method, shortages and overages, approval and PDF report.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_kitchen_print_at_payment" target="_blank"><img src="img/related_hilatech_pos_kitchen_print_at_payment.png" alt="Kitchen Print at Payment" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Kitchen Print at Payment</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Kitchen and bar tickets printed only when the payment is validated, two receipts per payment.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_kitchen_print_at_payment" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank"><img src="img/related_hilatech_hotel_management.png" alt="Hotel Management PMS 360&deg;" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Hotel Management PMS 360&deg;</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Availability planning, reservations, check-in / check-out, guest folio, invoicing and housekeeping.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank"><img src="img/related_hilatech_cash_journal.png" alt="Cash Journal" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cash Journal</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Monthly cash statements, daily opening and closing, operations locked once the day is closed.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">See all Hilatech modules &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="hl-fr" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Point de Vente &nbsp;&bull;&nbsp; KPI Restaurant &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Tableaux de bord <span style="color:#FF7900;">KPI Restaurant</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:760px; margin:0 auto 26px;">
+            Ventes, panier moyen, meilleurs serveurs et caissiers, factures et dette client, ventes en livraison
+            et tr&eacute;sorerie : tous les KPI pour piloter votre restaurant, pr&ecirc;ts &agrave; l&#39;emploi dans Odoo.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community &amp; Enterprise</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Restaurant &amp; bar</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">5</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">tableaux de bord, dont 1 facultatif</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">30+</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">KPI de gestion</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">carte par journal de banque ou de caisse</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">Pilotez votre restaurant avec des chiffres</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Tout ce qu&#39;un g&eacute;rant de restaurant doit suivre, dans <b style="color:#13283F;">quatre tableaux de bord Odoo</b> : ce que vous vendez et quand,
+            <b style="color:#13283F;">qui vend le mieux</b>, <b style="color:#13283F;">qui vous doit de l&#39;argent</b>, ce que rapportent les <b style="color:#13283F;">livraisons</b> et quelle
+            <b style="color:#13283F;">tr&eacute;sorerie</b> vous avez sur chaque compte, plus un tableau de bord <b style="color:#13283F;">d&eacute;penses</b> facultatif. Chaque tableau de bord a un filtre de date et ouvre
+            les commandes, factures ou paiements correspondants en un clic.
+        </p>
+    </div>
+
+    <!-- ===================== DASHBOARDS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Quatre tableaux de bord, plus un facultatif</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row justify-content-center">
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Restaurant KPI</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Tableaux de bord &gt; Ventes</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Ventes totales, vente moyenne par commande et par convive</li>
+                        <li style="margin-bottom:6px;">Nombre de commandes et commandes annul&eacute;es</li>
+                        <li style="margin-bottom:6px;">Ventes par heure et par jour de la semaine, avec le panier moyen</li>
+                        <li style="margin-bottom:6px;">Meilleurs produits et meilleures cat&eacute;gories</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Classement serveurs &amp; caissiers</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Tableaux de bord &gt; Ventes &gt; Stat Serveur</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Meilleur serveur et meilleur caissier par chiffre d&#39;affaires</li>
+                        <li style="margin-bottom:6px;">Meilleur serveur et meilleur caissier par nombre de commandes</li>
+                        <li style="margin-bottom:6px;">Graphiques des meilleurs serveurs et caissiers</li>
+                        <li style="margin-bottom:6px;">Serveur et caissier enregistr&eacute;s sur chaque commande POS</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Factures &amp; dette client</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Tableaux de bord &gt; Finance</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Total factur&eacute; et facture moyenne</li>
+                        <li style="margin-bottom:6px;">Dette client : factures impay&eacute;es et montant restant d&ucirc;</li>
+                        <li style="margin-bottom:6px;">Ventes en livraison : factures pay&eacute;es de vos clients livraison</li>
+                        <li style="margin-bottom:6px;">Factur&eacute; par mois, meilleures factures, pays et cat&eacute;gories</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Tr&eacute;sorerie</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Tableaux de bord &gt; Finance</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Ventes POS, achats (et d&eacute;penses pay&eacute;es) et balance</li>
+                        <li style="margin-bottom:6px;">Une carte par journal de banque, mobile money et caisse</li>
+                        <li style="margin-bottom:6px;">Tr&eacute;sorerie totale de tous vos comptes</li>
+                        <li style="margin-bottom:6px;">Les nouveaux journaux sont ajout&eacute;s automatiquement au tableau de bord</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:19px; font-weight:700; margin-bottom:4px;">Suivi des d&eacute;penses (facultatif)</div>
+                    <div style="color:#FF7900; font-size:13px; font-weight:700; margin-bottom:12px;">Tableaux de bord &gt; Finance &gt; Suivi des d&eacute;penses</div>
+                    <ul style="color:#555555; font-size:14px; line-height:1.6; padding-left:18px; margin:0;">
+                        <li style="margin-bottom:6px;">Total des d&eacute;penses et nombre de notes de frais</li>
+                        <li style="margin-bottom:6px;">Montants en brouillon, &agrave; valider et &agrave; rembourser</li>
+                        <li style="margin-bottom:6px;">D&eacute;penses par mois et par cat&eacute;gorie, principales d&eacute;penses et top employ&eacute;s</li>
+                        <li style="margin-bottom:6px;">Cr&eacute;&eacute; automatiquement d&egrave;s que l&#39;application Notes de frais est install&eacute;e</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BENEFITS ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Ce que le module apporte &agrave; votre restaurant</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-top:4px solid #28A745; border-radius:12px; padding:20px 22px; height:100%;">
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;"><span style="color:#28A745;">&#10004;</span> D&eacute;cidez avec des chiffres r&eacute;els</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Connaissez vos heures de pointe, vos meilleurs produits et votre panier moyen pour ajuster le personnel, la carte et les horaires.</div>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-top:4px solid #28A745; border-radius:12px; padding:20px 22px; height:100%;">
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;"><span style="color:#28A745;">&#10004;</span> Motivez votre &eacute;quipe</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Le classement des serveurs et caissiers donne une base objective pour les primes, les challenges et l&#39;employ&eacute; du mois.</div>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-top:4px solid #28A745; border-radius:12px; padding:20px 22px; height:100%;">
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;"><span style="color:#28A745;">&#10004;</span> R&eacute;cup&eacute;rez ce qu&#39;on vous doit</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">La dette client se lit en un coup d&#39;oeil, avec la liste des factures impay&eacute;es pr&ecirc;te pour les relances.</div>
+                </div>
+            </div>
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-top:4px solid #28A745; border-radius:12px; padding:20px 22px; height:100%;">
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;"><span style="color:#28A745;">&#10004;</span> Connaissez votre tr&eacute;sorerie</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Tr&eacute;sorerie par journal de banque, mobile money et caisse, sans ouvrir les rapports comptables.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== BUILT FOR ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Con&ccedil;u pour</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Restaurateurs</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Bars &amp; caf&eacute;s</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Fast-food &amp; livraison</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">G&eacute;rants &amp; comptables</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Groupes de restaurants</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Comment &ccedil;a marche</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Installez</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Les tableaux de bord sont cr&eacute;&eacute;s dans Tableaux de bord, sous Ventes et Finance.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Vendez et facturez comme d&#39;habitude</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Serveurs et caissiers sont enregistr&eacute;s sur les commandes POS. Cochez vos clients livraison.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Ouvrez vos tableaux de bord</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Choisissez la p&eacute;riode et cliquez sur un chiffre pour voir les commandes, factures ou paiements.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Captures d&#39;&eacute;cran</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto;"></div>
+    </div>
+
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Tableau de bord KPI Restaurant</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Ventes totales, vente moyenne par commande et par convive, commandes annul&eacute;es, ventes par heure et par jour, meilleurs produits.</div>
+        <img src="screenshots/restaurant_kpi_dashboard.png" alt="Restaurant KPI dashboard" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Meilleur serveur et meilleur caissier</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Les quatre tuiles &quot;meilleur&quot; et le classement des serveurs par chiffre d&#39;affaires.</div>
+        <img src="screenshots/leaderboard_best_staff.png" alt="Best waiter and best cashier" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Meilleurs caissiers et serveurs les plus actifs</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Chiffre d&#39;affaires encaiss&eacute; par chaque caissier et nombre de commandes servies par chaque serveur.</div>
+        <img src="screenshots/charts_cashiers_orders.png" alt="Top cashiers and most active waiters" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Factures, dette client et ventes en livraison</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Total factur&eacute;, facture moyenne, dette client avec le montant restant d&ucirc;, ventes en livraison et factur&eacute; par mois.</div>
+        <img src="screenshots/invoices_debt_delivery.png" alt="Invoices, customer debt and delivery sales" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Dette client : factures impay&eacute;es</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Facturation &gt; Clients &gt; Dette client : toutes les factures clients impay&eacute;es ou partiellement pay&eacute;es.</div>
+        <img src="screenshots/customer_debt_list.png" alt="Customer debt: unpaid invoices" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Cochez vos clients livraison</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Cochez Client livraison sur le contact : ses factures pay&eacute;es alimentent la carte des ventes en livraison.</div>
+        <img src="screenshots/delivery_customer_flag.png" alt="Flag your delivery customers" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Tableau de bord Tr&eacute;sorerie</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Ventes POS, factures fournisseurs, balance et une carte par journal de banque, mobile money et caisse.</div>
+        <img src="screenshots/treasury_dashboard.png" alt="Treasury dashboard" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Suivi des d&eacute;penses (facultatif)</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Avec l&#39;application Notes de frais : total, brouillon, &agrave; valider et &agrave; rembourser, d&eacute;penses par cat&eacute;gorie et par employ&eacute;.</div>
+        <img src="screenshots/expense_dashboard.png" alt="Expense tracking (optional)" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:48px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Ventes par serveur dans le back-office</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Point de Vente &gt; Analyse &gt; Ventes par serveur et caissier, regroup&eacute;es par serveur avec les totaux.</div>
+        <img src="screenshots/backoffice_by_waiter.png" alt="Sales per waiter in the back office" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Informations techniques</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Version d&#39;Odoo</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community &amp; Enterprise</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">D&eacute;pendances</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">point_of_sale, pos_restaurant, account, spreadsheet_dashboard</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Facultatif</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">hr_expense (application Notes de frais, non obligatoire) : tableau de bord Suivi des d&eacute;penses et d&eacute;penses dans la tr&eacute;sorerie</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Emplacement</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Tableaux de bord &gt; Ventes (Restaurant KPI, Stat Serveur) et Tableaux de bord &gt; Finance (Factures &amp; dette client, Tr&eacute;sorerie, Suivi des d&eacute;penses)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Droits d&#39;acc&egrave;s</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Managers POS, utilisateurs POS, utilisateurs facturation, responsables comptables et responsables des notes de frais, selon le tableau de bord</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Donn&eacute;es enregistr&eacute;es</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Nom du serveur et du caissier sur chaque commande POS, &agrave; partir de l&#39;installation</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Langue de l&#39;interface</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Fran&ccedil;ais (titres des tableaux de bord et menus)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Compatibilit&eacute;</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Peut &ecirc;tre install&eacute; avec les modules d&#39;impression POS Hilatech</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">Licence</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Nos services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech vous accompagne sur tout votre projet Odoo.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Personnalisation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Personnalisation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Impl&eacute;mentation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Impl&eacute;mentation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Migration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Migration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Int&eacute;gration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Int&eacute;gration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Conseil Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Conseil Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Formation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Formation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="D&eacute;veloppeur d&eacute;di&eacute;" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">D&eacute;veloppeur d&eacute;di&eacute;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Modules associ&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Les autres applications Hilatech pour Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank"><img src="img/related_hilatech_pos_cash_closing.png" alt="Cl&ocirc;ture de caisse POS" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cl&ocirc;ture de caisse POS</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Comptage quotidien vs Odoo par mode de paiement, manquants et exc&eacute;dents, approbation et rapport PDF.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_kitchen_print_at_payment" target="_blank"><img src="img/related_hilatech_pos_kitchen_print_at_payment.png" alt="Impression cuisine au paiement" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Impression cuisine au paiement</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Bons cuisine et bar imprim&eacute;s seulement &agrave; la validation du paiement, deux re&ccedil;us.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_kitchen_print_at_payment" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank"><img src="img/related_hilatech_hotel_management.png" alt="Gestion h&ocirc;teli&egrave;re PMS 360&deg;" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Gestion h&ocirc;teli&egrave;re PMS 360&deg;</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Planning des chambres, r&eacute;servations, check-in / check-out, folio client, facturation et m&eacute;nage.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank"><img src="img/related_hilatech_cash_journal.png" alt="Journal de Caisse" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Journal de Caisse</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Relev&eacute;s de caisse mensuels, ouverture et cl&ocirc;ture quotidiennes, op&eacute;rations verrouill&eacute;es.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">Voir tous les modules Hilatech &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:46px 24px 30px; text-align:center; margin-bottom:24px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:210px; max-width:70%; height:auto; display:block; margin:0 auto 18px;"/>
+        <div style="color:#FFFFFF; font-size:24px; font-weight:700; margin-bottom:8px;">Need help or a custom report?</div>
+        <div style="color:#D5DDE8; font-size:15px; line-height:1.6; max-width:620px; margin:0 auto 24px;">
+            HILATECH &mdash; Odoo integrator. Support, implementation and custom Odoo development, in English and French.
+        </div>
+        <div style="margin-bottom:24px;">
+            <a href="mailto:support@hilatech.co" style="display:inline-block; background-color:#FF7900; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">support@hilatech.co</a>
+            <a href="https://hilatech.co/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#FFFFFF; color:#13283F; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">hilatech.co</a>
+            <a href="https://api.whatsapp.com/send?phone=237694846159" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#25D366; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">WhatsApp</a>
+        </div>
+        <div style="border-top:1px solid #2C4866; padding-top:18px; color:#9FB0C4; font-size:13px;">
+            &copy; 2026 HILATECH &mdash; Digitalisez. Optimisez. Excellez.
+        </div>
+    </div>
+
+</div>

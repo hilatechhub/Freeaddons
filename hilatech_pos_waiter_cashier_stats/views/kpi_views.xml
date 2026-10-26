@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Commandes restaurant confirmées (ouvertes depuis le tableau de bord Restaurant KPI) -->
+    <record id="action_kpi_restaurant_orders" model="ir.actions.act_window">
+        <field name="name">Commandes restaurant</field>
+        <field name="res_model">pos.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('state', 'in', ['paid', 'done', 'invoiced']), ('config_id.module_pos_restaurant', '=', True)]</field>
+    </record>
+    <menuitem id="menu_kpi_restaurant_orders"
+        name="Commandes restaurant"
+        parent="point_of_sale.menu_point_rep"
+        action="action_kpi_restaurant_orders"
+        sequence="55"/>
+
+    <!-- Dette client : factures clients impayées ou partiellement payées -->
+    <record id="action_kpi_customer_debt" model="ir.actions.act_window">
+        <field name="name">Dette client - Factures impayées</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('payment_state', 'in', ['not_paid', 'partial']), ('move_type', '=', 'out_invoice'), ('state', '=', 'posted')]</field>
+        <field name="context">{'default_move_type': 'out_invoice'}</field>
+    </record>
+    <menuitem id="menu_kpi_customer_debt"
+        name="Dette client"
+        parent="account.menu_finance_receivables"
+        action="action_kpi_customer_debt"
+        sequence="90"/>
+
+    <!-- Ventes en livraison : factures payées des clients "Client livraison" -->
+    <record id="action_kpi_delivery_invoices" model="ir.actions.act_window">
+        <field name="name">Ventes livraison - Factures payées</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('payment_state', '=', 'paid'), ('partner_id.hl_delivery_customer', '=', True), ('move_type', '=', 'out_invoice')]</field>
+        <field name="context">{'default_move_type': 'out_invoice'}</field>
+    </record>
+    <menuitem id="menu_kpi_delivery_invoices"
+        name="Ventes livraison"
+        parent="account.menu_finance_receivables"
+        action="action_kpi_delivery_invoices"
+        sequence="91"/>
+
+    <!-- Fiche contact : case "Client livraison" -->
+    <record id="view_partner_form_delivery_customer" model="ir.ui.view">
+        <field name="name">res.partner.form.delivery.customer</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sale']" position="inside">
+                <field name="hl_delivery_customer"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

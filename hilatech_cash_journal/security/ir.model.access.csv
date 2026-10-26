@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cash_journal_report_user,cash.journal.report.user,model_cash_journal_report,group_cash_journal_user,1,1,1,0
+access_cash_journal_report_manager,cash.journal.report.manager,model_cash_journal_report,group_cash_journal_manager,1,1,1,1
+access_cash_journal_operation_user,cash.journal.operation.user,model_cash_journal_operation,group_cash_journal_user,1,1,1,0
+access_cash_journal_operation_manager,cash.journal.operation.manager,model_cash_journal_operation,group_cash_journal_manager,1,1,1,1
+access_cash_journal_pdf_report_user,cash.journal.pdf.report.user,model_cash_journal_pdf_report,group_cash_journal_user,1,1,1,0
+access_cash_journal_pdf_report_manager,cash.journal.pdf.report.manager,model_cash_journal_pdf_report,group_cash_journal_manager,1,1,1,1

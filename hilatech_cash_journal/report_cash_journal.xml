@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Rapport PDF Caisse -->
+    <report
+        id="report_cash_journal_pdf"
+        model="cash.journal.report"
+        string="Rapport de Caisse PDF"
+        report_type="qweb-pdf"
+        name="hilatech_cash_journal.report_cash_journal_template"
+        file="hilatech_cash_journal.report_cash_journal"
+    />
+
+    <!-- Template Rapport -->
+    <template id="report_cash_journal_template" name="Rapport de Caisse">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="reports" t-value="env['cash.journal.report'].search([
+                    ('month_date', '&gt;=', doc.date_start),
+                    ('month_date', '&lt;=', doc.date_end),
+                ], order='month_date desc')"/>
+
+                <div class="page">
+                    <!-- En-tête -->
+                    <div class="text-center mb-4">
+                        <h1>Rapport de Caisse</h1>
+                        <h3 t-esc="doc.company_id.name"/>
+                        <p>
+                            <strong>Période:</strong>
+                            <t t-esc="doc.date_start.strftime('%d/%m/%Y')"/>
+                            au
+                            <t t-esc="doc.date_end.strftime('%d/%m/%Y')"/>
+                        </p>
+                        <p><strong>Date du rapport:</strong> <t t-esc="datetime.now().strftime('%d/%m/%Y %H:%M')"/></p>
+                    </div>
+
+                    <!-- Relevés et Opérations -->
+                    <t t-foreach="reports" t-as="report">
+                        <div class="mt-4">
+                            <table class="table table-sm table-bordered">
+                                <thead>
+                                    <tr style="background-color: #366092; color: white;">
+                                        <th colspan="5">
+                                            <strong>Relevé de Caisse: <t t-esc="report.name"/> - <t t-esc="report.month_date.strftime('%B %Y')"/></strong>
+                                        </th>
+                                    </tr>
+                                    <tr style="background-color: #e8e8e8;">
+                                        <th>Solde Initial</th>
+                                        <th>Total Opérations</th>
+                                        <th>Solde Final</th>
+                                        <th>État</th>
+                                        <th>Responsable</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-right">
+                                            <t t-esc="'{:,.2f}'.format(report.initial_balance)"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="'{:,.2f}'.format(sum(report.operation_ids.mapped('amount')))"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="'{:,.2f}'.format(report.final_balance)"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="report.get_status_display() if hasattr(report, 'get_status_display') else report.state.upper()"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="report.user_id.name"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Opérations détaillées -->
+                            <t t-if="report.operation_ids">
+                                <div class="ml-3">
+                                    <h5>Détail des Opérations:</h5>
+                                    <table class="table table-sm table-striped">
+                                        <thead>
+                                            <tr style="background-color: #f5f5f5;">
+                                                <th>Date</th>
+                                                <th>Description</th>
+                                                <th>Reçu par</th>
+                                                <th>Type</th>
+                                                <th class="text-right">Montant</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="report.operation_ids" t-as="op">
+                                                <tr>
+                                                    <td><t t-esc="op.date.strftime('%d/%m/%Y')"/></td>
+                                                    <td><t t-esc="op.description"/></td>
+                                                    <td><t t-esc="op.received_by.name"/></td>
+                                                    <td>
+                                                        <t t-if="op.amount &gt; 0">
+                                                            <span class="badge badge-success">Entrée</span>
+                                                        </t>
+                                                        <t t-if="op.amount &lt; 0">
+                                                            <span class="badge badge-danger">Sortie</span>
+                                                        </t>
+                                                        <t t-if="op.amount == 0">
+                                                            <span class="badge badge-secondary">Neutre</span>
+                                                        </t>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <t t-esc="'{:,.2f}'.format(op.amount)"/>
+                                                    </td>
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </t>
+                        </div>
+                        <div style="page-break-after: always;"></div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

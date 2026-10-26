@@ -1,0 +1,631 @@
+<!--
+    Odoo Apps Store page - compatibility rules followed on purpose:
+    - ASCII only: accents are HTML entities.
+    - Inline CSS limited to the properties kept by Odoo's html_sanitize whitelist
+      (no flex, gap, box-shadow, position or "background" shorthand).
+    - Layout uses Bootstrap classes (container / row / col-*), available on the store.
+-->
+<div class="container" style="max-width:1140px; font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color:#333333;">
+
+    <!-- ===================== LANGUAGE TABS ===================== -->
+    <ul class="nav nav-tabs justify-content-end" role="tablist" style="margin-top:16px;">
+        <li class="nav-item" role="presentation"><a class="nav-link active" href="#hl-en" data-bs-toggle="tab" data-bs-target="#hl-en" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">English</a></li>
+        <li class="nav-item" role="presentation"><a class="nav-link" href="#hl-fr" data-bs-toggle="tab" data-bs-target="#hl-fr" role="tab" style="color:#13283F; font-weight:700; font-size:14px; padding:8px 22px;">Fran&ccedil;ais</a></li>
+    </ul>
+
+    <div class="tab-content">
+    <div class="tab-pane fade show active" id="hl-en" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Accounting &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Export Accounting Reports to <span style="color:#FF7900;">Excel</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:720px; margin:0 auto 26px;">
+            One click, one clean XLSX file &mdash; for every Base Accounting Kit report and for your customer &amp; vendor invoices.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community &amp; Enterprise</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">XLSX export</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">12</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">accounting reports</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">+1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">bulk invoice export</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">click, no setup</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">Your PDF reports, now in a spreadsheet</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Base Accounting Kit produces great PDF reports, but accountants, auditors and controllers need the figures in Excel.
+            This module adds an <b style="color:#13283F;">Export Excel</b> button right next to <b style="color:#13283F;">Print</b>
+            on every report wizard. The file keeps the layout of the PDF &mdash; header, hierarchy, totals &mdash; while every
+            amount stays a <b style="color:#13283F;">real number</b> you can sum, filter and pivot.
+        </p>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Key features</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Faithful to the PDF</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Same account hierarchy, child accounts indented automatically, totals and subtotals in bold.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Complete header</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Company logo and name, report period, applied filters (journals, accounts) and target moves.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Same filters as Print</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">The export uses exactly the options chosen in the wizard. Nothing new to learn for your team.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Ready-to-use figures</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Amounts are numbers in the company currency format, not text. Works with Excel, LibreOffice and Google Sheets.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Bulk invoice export</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Select one or many invoices, then Actions &gt; Export Excel: a summary sheet plus one detailed sheet per invoice.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">06</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Light and safe</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">No new database field: clean install and uninstall. Only dependency: xlsxwriter, already shipped with Odoo.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SUPPORTED REPORTS ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Supported reports</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Profit and Loss</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Balance Sheet</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">General Ledger</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Trial Balance</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Partner Ledger</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Aged Partner Balance</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Journal Audit</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Cash Flow Statement</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Bank Book</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Cash Book</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Day Book</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Tax Report</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Customer &amp; Vendor Invoices</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">How it works</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Open a report</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Accounting &gt; Reporting &gt; any Base Accounting Kit report.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Set your filters</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Dates, journals, accounts, target moves &mdash; exactly as for the PDF.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Click Export Excel</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">The XLSX file is generated and downloaded immediately.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Screenshots</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto;"></div>
+    </div>
+
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Profit and Loss / Balance Sheet</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">The green Export Excel button sits right next to Print, with the same options.</div>
+        <img src="screenshots/screenshot-1.png" alt="Profit and Loss wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Bank Book &amp; Cash Book</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Filter by accounts and journals, sort by date or by journal &amp; partner, include initial balances.</div>
+        <img src="screenshots/screenshot-2.png" alt="Bank Book wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Day Book</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Daily movements across the journals you select.</div>
+        <img src="screenshots/screenshot-3.png" alt="Day Book wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Trial Balance</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Export all accounts, only those with movements, or only non-zero balances.</div>
+        <img src="screenshots/screenshot-4.png" alt="Trial Balance wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> General Ledger</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">The full ledger with journal filters, sorting and initial balances.</div>
+        <img src="screenshots/screenshot-5.png" alt="General Ledger wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:48px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Invoices: bulk export</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Select your invoices in the list, then Actions &gt; Export Excel.</div>
+        <img src="screenshots/screenshot-6.png" alt="Export Excel action on the invoice list" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Technical information</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Odoo version</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community &amp; Enterprise</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Dependencies</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">account, base_accounting_kit</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Python library</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">xlsxwriter (shipped with Odoo)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Output format</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">XLSX (Office Open XML)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Configuration</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">None &mdash; works right after installation</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">License</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Our Services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech supports you on your whole Odoo project.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Odoo Customization" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Customization</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Odoo Implementation" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Implementation</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; Maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; Maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Odoo Migration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Migration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Odoo Integration" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Integration</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Odoo Consulting" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Consulting</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Odoo Training" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Odoo Training</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="Dedicated Developer" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Dedicated Developer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Related Modules</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Other Hilatech apps for Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank"><img src="img/related_hilatech_cash_journal.png" alt="Cash Journal" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cash Journal</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Monthly cash statements, daily opening and closing, operations locked once the day is closed.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank"><img src="img/related_hilatech_pos_cash_closing.png" alt="POS Cash Closing" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">POS Cash Closing</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Daily cash count vs Odoo per payment method, shortages and overages, approval and PDF report.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank"><img src="img/related_hilatech_hotel_management.png" alt="Hotel Management PMS 360&deg;" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Hotel Management PMS 360&deg;</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Availability planning, reservations, check-in / check-out, guest folio, invoicing and housekeeping.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank"><img src="img/related_hilatech_purchase_dashboard.png" alt="Purchase Dashboard" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Purchase Dashboard</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Purchases, vendor debt, orders not received or not invoiced and top suppliers at a glance.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">View on Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">See all Hilatech modules &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="hl-fr" role="tabpanel">
+
+    <!-- ===================== HERO ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:56px 28px 44px; text-align:center; margin-top:16px; margin-bottom:48px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:230px; max-width:70%; height:auto; display:block; margin:0 auto 22px;"/>
+        <div style="color:#FF7900; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin-bottom:12px;">Comptabilit&eacute; &nbsp;&bull;&nbsp; Odoo 19</div>
+        <div style="color:#FFFFFF; font-size:40px; line-height:1.2; font-weight:700; margin-bottom:14px;">Exportez vos rapports comptables vers <span style="color:#FF7900;">Excel</span></div>
+        <div style="color:#D5DDE8; font-size:18px; line-height:1.6; max-width:720px; margin:0 auto 26px;">
+            Un clic, un fichier XLSX propre &mdash; pour chaque rapport de Base Accounting Kit et pour vos factures clients &amp; fournisseurs.
+        </div>
+        <div style="margin-bottom:30px;">
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Odoo 19</span>
+            <span style="display:inline-block; background-color:#FFFFFF; color:#13283F; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Community &amp; Enterprise</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:20px; padding:6px 16px; margin:4px; font-size:13px; font-weight:700;">Export XLSX</span>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">12</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">rapports comptables</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">+1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">export group&eacute; des factures</div>
+                </div>
+            </div>
+            <div class="col-4 col-md-3" style="padding:6px;">
+                <div style="background-color:#1D3A57; border-radius:12px; padding:16px 6px;">
+                    <div style="color:#FF7900; font-size:32px; font-weight:700; line-height:1;">1</div>
+                    <div style="color:#D5DDE8; font-size:13px; margin-top:6px;">clic, sans configuration</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== INTRO ===================== -->
+    <div style="text-align:center; max-width:820px; margin:0 auto 48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:14px;">Vos rapports PDF, enfin dans un tableur</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 20px;"></div>
+        <p style="font-size:16px; line-height:1.7; color:#555555; margin:0;">
+            Base Accounting Kit produit de tr&egrave;s bons rapports PDF, mais comptables, auditeurs et contr&ocirc;leurs de gestion ont besoin des chiffres dans Excel.
+            Ce module ajoute un bouton <b style="color:#13283F;">Export Excel</b> juste &agrave; c&ocirc;t&eacute; du bouton <b style="color:#13283F;">Imprimer</b>
+            de chaque assistant de rapport. Le fichier garde la mise en page du PDF &mdash; en-t&ecirc;te, hi&eacute;rarchie, totaux &mdash; et chaque
+            montant reste un <b style="color:#13283F;">vrai nombre</b> que vous pouvez additionner, filtrer et analyser.
+        </p>
+    </div>
+
+    <!-- ===================== FEATURES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Fonctionnalit&eacute;s cl&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">01</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Fid&egrave;le au PDF</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">M&ecirc;me hi&eacute;rarchie des comptes, sous-comptes indent&eacute;s automatiquement, totaux et sous-totaux en gras.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">02</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">En-t&ecirc;te complet</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Logo et nom de la soci&eacute;t&eacute;, p&eacute;riode du rapport, filtres appliqu&eacute;s (journaux, comptes) et &eacute;critures cibl&eacute;es.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">03</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Les m&ecirc;mes filtres que l&#39;impression</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">L&#39;export reprend exactement les options choisies dans l&#39;assistant. Rien de nouveau &agrave; apprendre pour votre &eacute;quipe.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">04</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Des chiffres exploitables</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Les montants sont des nombres au format de la devise de la soci&eacute;t&eacute;, pas du texte. Compatible Excel, LibreOffice et Google Sheets.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">05</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">Export group&eacute; des factures</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">S&eacute;lectionnez une ou plusieurs factures, puis Action &gt; Export Excel : une feuille de synth&egrave;se et une feuille d&eacute;taill&eacute;e par facture.</div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px; height:100%;">
+                    <div style="width:40px; height:40px; line-height:40px; text-align:center; border-radius:10px; background-color:#13283F; color:#FFFFFF; font-weight:700; font-size:16px; margin-bottom:14px;">06</div>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:8px;">L&eacute;ger et s&ucirc;r</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6;">Aucun nouveau champ en base : installation et d&eacute;sinstallation propres. Seule d&eacute;pendance : xlsxwriter, d&eacute;j&agrave; fourni avec Odoo.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SUPPORTED REPORTS ===================== -->
+    <div style="text-align:center; margin-bottom:48px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Rapports pris en charge</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <div style="max-width:900px; margin:0 auto;">
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Compte de r&eacute;sultat</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Bilan</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Grand livre</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Balance g&eacute;n&eacute;rale</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Grand livre des partenaires</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Balance &acirc;g&eacute;e</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Audit des journaux</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Tableau des flux de tr&eacute;sorerie</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Livre de banque</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Livre de caisse</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Journal quotidien</span>
+            <span style="display:inline-block; background-color:#13283F; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Rapport de taxes</span>
+            <span style="display:inline-block; background-color:#FF7900; color:#FFFFFF; border-radius:22px; padding:8px 18px; margin:5px; font-size:14px; font-weight:600;">Factures clients &amp; fournisseurs</span>
+        </div>
+    </div>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 30px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Comment &ccedil;a marche</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 30px;"></div>
+        <div class="row">
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">1</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Ouvrez un rapport</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Comptabilit&eacute; &gt; Analyse &gt; n&#39;importe quel rapport de Base Accounting Kit.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#FF7900; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">2</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">R&eacute;glez vos filtres</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Dates, journaux, comptes, &eacute;critures cibl&eacute;es &mdash; exactement comme pour le PDF.</div>
+            </div>
+            <div class="col-md-4" style="text-align:center; margin-bottom:16px;">
+                <div style="width:56px; height:56px; line-height:56px; border-radius:28px; background-color:#28A745; color:#FFFFFF; font-size:22px; font-weight:700; margin:0 auto 14px;">3</div>
+                <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cliquez sur Export Excel</div>
+                <div style="color:#555555; font-size:14px; line-height:1.6;">Le fichier XLSX est g&eacute;n&eacute;r&eacute; et t&eacute;l&eacute;charg&eacute; imm&eacute;diatement.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCREENSHOTS ===================== -->
+    <div style="text-align:center; margin-bottom:30px;">
+        <div style="color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Captures d&#39;&eacute;cran</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto;"></div>
+    </div>
+
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Compte de r&eacute;sultat / Bilan</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Le bouton vert Export Excel se trouve juste &agrave; c&ocirc;t&eacute; d&#39;Imprimer, avec les m&ecirc;mes options.</div>
+        <img src="screenshots/screenshot-1.png" alt="Profit and Loss wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Livre de banque &amp; livre de caisse</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Filtrez par comptes et journaux, triez par date ou par journal &amp; partenaire, incluez les soldes initiaux.</div>
+        <img src="screenshots/screenshot-2.png" alt="Bank Book wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Journal quotidien</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Les mouvements du jour sur les journaux s&eacute;lectionn&eacute;s.</div>
+        <img src="screenshots/screenshot-3.png" alt="Day Book wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Balance g&eacute;n&eacute;rale</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Exportez tous les comptes, seulement ceux avec mouvements, ou seulement les soldes non nuls.</div>
+        <img src="screenshots/screenshot-4.png" alt="Trial Balance wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:44px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Grand livre</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">Le grand livre complet avec filtres par journal, tri et soldes initiaux.</div>
+        <img src="screenshots/screenshot-5.png" alt="General Ledger wizard with Export Excel button" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+    <div style="margin-bottom:48px;">
+        <div style="color:#13283F; font-size:20px; font-weight:700; margin-bottom:4px;"><span style="color:#FF7900;">&#9632;</span> Factures : export group&eacute;</div>
+        <div style="color:#555555; font-size:15px; margin-bottom:14px;">S&eacute;lectionnez vos factures dans la liste, puis Action &gt; Export Excel.</div>
+        <img src="screenshots/screenshot-6.png" alt="Export Excel action on the invoice list" class="img-fluid" style="width:100%; height:auto; border:1px solid #DDE3EA; border-radius:10px;"/>
+    </div>
+
+    <!-- ===================== TECHNICAL ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Informations techniques</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 26px;"></div>
+        <table style="width:100%; max-width:760px; margin:0 auto; border-collapse:collapse; background-color:#FFFFFF; font-size:15px;">
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700; width:40%;">Version d&#39;Odoo</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">19.0 &mdash; Community &amp; Enterprise</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">D&eacute;pendances</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">account, base_accounting_kit</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Biblioth&egrave;que Python</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">xlsxwriter (fourni avec Odoo)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Format de sortie</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">XLSX (Office Open XML)</td></tr>
+            <tr><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#13283F; font-weight:700;">Configuration</td><td style="padding:13px 18px; border-bottom:1px solid #E6EAF0; color:#555555;">Aucune &mdash; fonctionne d&egrave;s l&#39;installation</td></tr>
+            <tr><td style="padding:13px 18px; color:#13283F; font-weight:700;">Licence</td><td style="padding:13px 18px; color:#555555;">LGPL-3</td></tr>
+        </table>
+    </div>
+
+
+    <!-- ===================== OUR SERVICES ===================== -->
+    <div style="background-color:#F3F5F8; border-radius:16px; padding:44px 20px 24px; margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Nos services</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Hilatech vous accompagne sur tout votre projet Odoo.</div>
+        <div class="row">
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_customization.png" alt="Personnalisation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Personnalisation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_implementation.png" alt="Impl&eacute;mentation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Impl&eacute;mentation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_support.png" alt="Support &amp; maintenance" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Support &amp; maintenance</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_migration.png" alt="Migration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Migration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_integration.png" alt="Int&eacute;gration Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Int&eacute;gration Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_consulting.png" alt="Conseil Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Conseil Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_training.png" alt="Formation Odoo" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">Formation Odoo</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border-radius:12px; border-top:4px solid #FF7900; padding:24px 12px; text-align:center; height:100%;">
+                    <img src="img/svc_developer.png" alt="D&eacute;veloppeur d&eacute;di&eacute;" style="width:56px; height:56px; display:block; margin:0 auto 14px;"/>
+                    <div style="color:#13283F; font-size:16px; font-weight:700;">D&eacute;veloppeur d&eacute;di&eacute;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== RELATED MODULES ===================== -->
+    <div style="margin-bottom:48px;">
+        <div style="text-align:center; color:#13283F; font-size:28px; font-weight:700; margin-bottom:8px;">Modules associ&eacute;s</div>
+        <div style="width:60px; height:4px; background-color:#FF7900; border-radius:2px; margin:0 auto 14px;"></div>
+        <div style="text-align:center; color:#555555; font-size:15px; margin-bottom:28px;">Les autres applications Hilatech pour Odoo 19.</div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank"><img src="img/related_hilatech_cash_journal.png" alt="Journal de Caisse" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Journal de Caisse</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Relev&eacute;s de caisse mensuels, ouverture et cl&ocirc;ture quotidiennes, op&eacute;rations verrouill&eacute;es.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_cash_journal" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank"><img src="img/related_hilatech_pos_cash_closing.png" alt="Cl&ocirc;ture de caisse POS" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Cl&ocirc;ture de caisse POS</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Comptage quotidien vs Odoo par mode de paiement, manquants et exc&eacute;dents, approbation et rapport PDF.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_pos_cash_closing" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank"><img src="img/related_hilatech_hotel_management.png" alt="Gestion h&ocirc;teli&egrave;re PMS 360&deg;" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Gestion h&ocirc;teli&egrave;re PMS 360&deg;</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Planning des chambres, r&eacute;servations, check-in / check-out, folio client, facturation et m&eacute;nage.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_hotel_management" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3" style="margin-bottom:20px;">
+                <div style="background-color:#FFFFFF; border:1px solid #E6EAF0; border-radius:12px; padding:14px; height:100%;">
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank"><img src="img/related_hilatech_purchase_dashboard.png" alt="Tableau de bord Achats" class="img-fluid" style="width:100%; height:auto; border-radius:8px; margin-bottom:14px;"/></a>
+                    <div style="color:#13283F; font-size:17px; font-weight:700; margin-bottom:6px;">Tableau de bord Achats</div>
+                    <div style="color:#555555; font-size:14px; line-height:1.6; margin-bottom:12px;">Achats, dette fournisseurs, commandes non re&ccedil;ues ou non factur&eacute;es et meilleurs fournisseurs.</div>
+                    <a href="https://apps.odoo.com/apps/modules/19.0/hilatech_purchase_dashboard" target="_blank" style="color:#FF7900; font-weight:700; font-size:14px; text-decoration:none;">Voir sur Odoo Apps &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:8px;">
+            <a href="https://apps.odoo.com/apps/modules/browse?author=HILATECH" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#13283F; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 28px;">Voir tous les modules Hilatech &rarr;</a>
+        </div>
+    </div>
+
+    </div>
+    </div>
+
+    <!-- ===================== FOOTER ===================== -->
+    <div style="background-color:#13283F; background-image:url('back-07.png'); background-size:cover; background-position:center; border-radius:16px; padding:46px 24px 30px; text-align:center; margin-bottom:24px;">
+        <img src="img/logo_hilatech_white.png" alt="HILATECH" style="width:210px; max-width:70%; height:auto; display:block; margin:0 auto 18px;"/>
+        <div style="color:#FFFFFF; font-size:24px; font-weight:700; margin-bottom:8px;">Need help or a custom report?</div>
+        <div style="color:#D5DDE8; font-size:15px; line-height:1.6; max-width:620px; margin:0 auto 24px;">
+            HILATECH &mdash; Odoo integrator. Support, implementation and custom Odoo development, in English and French.
+        </div>
+        <div style="margin-bottom:24px;">
+            <a href="mailto:support@hilatech.co" style="display:inline-block; background-color:#FF7900; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">support@hilatech.co</a>
+            <a href="https://hilatech.co/" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#FFFFFF; color:#13283F; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">hilatech.co</a>
+            <a href="https://api.whatsapp.com/send?phone=237694846159" target="_blank" rel="noopener noreferrer" style="display:inline-block; background-color:#25D366; color:#FFFFFF; text-decoration:none; font-weight:700; font-size:15px; border-radius:24px; padding:11px 26px; margin:5px;">WhatsApp</a>
+        </div>
+        <div style="border-top:1px solid #2C4866; padding-top:18px; color:#9FB0C4; font-size:13px;">
+            &copy; 2026 HILATECH &mdash; Digitalisez. Optimisez. Excellez.
+        </div>
+    </div>
+
+</div>

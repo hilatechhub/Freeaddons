@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Restaurant KPI : ventes, panier moyen, convives, ventes par heure, tables, produits
+         (Tableaux de bord > Ventes, managers Point de Vente) -->
+    <record id="dashboard_restaurant_kpi" model="spreadsheet.dashboard">
+        <field name="name">Restaurant KPI</field>
+        <field name="dashboard_group_id" ref="spreadsheet_dashboard.spreadsheet_dashboard_group_sales"/>
+        <field name="group_ids" eval="[Command.link(ref('point_of_sale.group_pos_manager'))]"/>
+        <field name="spreadsheet_binary_data" type="base64"
+               file="hilatech_pos_waiter_cashier_stats/data/files/restaurant_dashboard.json"/>
+        <field name="sample_dashboard_file_path">hilatech_pos_waiter_cashier_stats/data/files/restaurant_sample_dashboard.json</field>
+    </record>
+
+    <!-- Tableau de bord "Stat Serveur" : meilleurs serveurs et caissiers
+         (Tableaux de bord > Ventes, réservé aux utilisateurs Point de Vente) -->
+    <record id="dashboard_staff_stats" model="spreadsheet.dashboard">
+        <field name="name">Stat Serveur</field>
+        <field name="dashboard_group_id" ref="spreadsheet_dashboard.spreadsheet_dashboard_group_sales"/>
+        <field name="group_ids" eval="[Command.link(ref('point_of_sale.group_pos_user'))]"/>
+        <field name="spreadsheet_binary_data" type="base64"
+               file="hilatech_pos_waiter_cashier_stats/data/files/staff_dashboard.json"/>
+        <field name="sample_dashboard_file_path">hilatech_pos_waiter_cashier_stats/data/files/staff_dashboard.json</field>
+    </record>
+
+    <!-- Factures & dette client : facturé, facture moyenne, dette client, ventes livraison
+         (Tableaux de bord > Finance) -->
+    <record id="dashboard_invoices_debt" model="spreadsheet.dashboard">
+        <field name="name">Factures &amp; dette client</field>
+        <field name="dashboard_group_id" ref="spreadsheet_dashboard.spreadsheet_dashboard_group_finance"/>
+        <field name="group_ids" eval="[Command.link(ref('account.group_account_readonly')), Command.link(ref('account.group_account_invoice'))]"/>
+        <field name="spreadsheet_binary_data" type="base64"
+               file="hilatech_pos_waiter_cashier_stats/data/files/invoicing_dashboard.json"/>
+        <field name="sample_dashboard_file_path">hilatech_pos_waiter_cashier_stats/data/files/invoicing_dashboard.json</field>
+    </record>
+
+    <!-- Trésorerie : ventes, achats, balance et une carte par journal banque / caisse
+         (Tableaux de bord > Finance, regénéré à chaque création de journal) -->
+    <record id="dashboard_treasury" model="spreadsheet.dashboard">
+        <field name="name">Trésorerie</field>
+        <field name="dashboard_group_id" ref="spreadsheet_dashboard.spreadsheet_dashboard_group_finance"/>
+        <field name="group_ids" eval="[Command.link(ref('account.group_account_manager'))]"/>
+        <field name="spreadsheet_binary_data" type="base64"
+               file="hilatech_pos_waiter_cashier_stats/data/files/treasury_dashboard.json"/>
+        <field name="sample_dashboard_file_path">hilatech_pos_waiter_cashier_stats/data/files/treasury_dashboard.json</field>
+    </record>
+    <function model="account.journal" name="_hl_refresh_treasury_dashboard"/>
+</odoo>
